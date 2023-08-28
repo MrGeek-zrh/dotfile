@@ -108,6 +108,6 @@ let g:Lf_ShortcutF = '<c-p>'
 let g:Lf_CommandMap = {'<C-Up>': ['<Up>'], '<C-Down>': ['<Down>']}
 let g:Lf_WildIgnore = {
 			\ 'dir': ['.svn','.git','.hg'],
-			\ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
+			\ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]','.gitignore']
 			\}
 
