@@ -95,6 +95,19 @@ set clipboard=unnamed
 " Format the entire buffer 
 map <leader>f :%normal! gg=G<CR>
 
-" 设置ctrlp的默认搜索路径为vim打开文件时的根目录
-let g:ctrlp_working_path_mode = 'r'
-let g:ctrlp_working_path = ''
+" 设置vim在哪打开的项目，就搜索哪个路径下的文件
+if !exists('g:first_vim_enter')
+    let g:first_vim_enter = 1
+    autocmd VimEnter * execute 'cd %:p:h'
+endif
+let g:Lf_WorkingDirectory = getcwd()
+
+" leaderF 快捷键
+let g:Lf_ShortcutF = '<c-p>'
+
+let g:Lf_CommandMap = {'<C-Up>': ['<Up>'], '<C-Down>': ['<Down>']}
+let g:Lf_WildIgnore = {
+			\ 'dir': ['.svn','.git','.hg'],
+			\ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
+			\}
+
