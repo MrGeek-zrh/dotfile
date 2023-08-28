@@ -94,3 +94,7 @@ set clipboard=unnamed
 
 " Format the entire buffer 
 map <leader>f :%normal! gg=G<CR>
+
+" 设置ctrlp的默认搜索路径为vim打开文件时的根目录
+let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_working_path = ''
