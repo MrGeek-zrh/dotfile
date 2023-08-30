@@ -114,3 +114,6 @@ let g:Lf_WildIgnore = {
 
 let g:Lf_WindowPosition = 'popup'
 noremap <Leader>rg :<C-U>Leaderf rg -e 
+
+" 设置vim 打开新窗口默认放在右边
+set splitright
