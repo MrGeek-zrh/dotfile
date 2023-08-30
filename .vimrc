@@ -104,11 +104,13 @@ let g:Lf_WorkingDirectory = getcwd()
 
 " leaderF 快捷键
 let g:Lf_ShortcutF = '<c-p>'
-
 let g:Lf_CommandMap = {'<C-Up>': ['<Up>'], '<C-Down>': ['<Down>']}
+
+
 let g:Lf_WildIgnore = {
-      \ 'dir': ['.svn','.git','.hg'],
-      \ 'file': ['*.sw?','*.bak','*.exe','*.o','*.so','*.py[co]','~$*']
-      \}
+  \ 'dir': [".svn",".git",".hg"],
+  \ 'file': ['*.sw?','*.bak','*.exe','*.o','*.so','*.py[co]','~$*']
+  \}
+
 let g:Lf_WindowPosition = 'popup'
 noremap <Leader>rg :<C-U>Leaderf rg -e 
