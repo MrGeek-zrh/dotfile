@@ -15,13 +15,15 @@ while read path action file; do
   # Add the changed file to Git index
   cd $DEST_DIR
   git add $path
-	echo $path
+	# Commit changes
+	cd $DEST_DIR
+	git commit -m "Automated backup of dotfiles"
+
+	echo "git committed"
+
+	# Push to remote repository (assuming the remote is already set up)
+	git push 
 done
-
-
-
-
-
 
 # Watch for changes in source directory
 inotifywait -m -r -e modify,create,delete $SOURCE_VIM_DIR |
@@ -36,13 +38,14 @@ while read path action file; do
   cd $DEST_DIR
   git add $relative_path
 	echo $relative_path
+	# Commit changes
+	cd $DEST_DIR
+	git commit -m "Automated backup of dotfiles"
+
+	echo "git committed"
+
+	# Push to remote repository (assuming the remote is already set up)
+	git push 
 done &
 
-# Commit changes
-cd $DEST_DIR
-git commit -m "Automated backup of dotfiles"
 
-echo "git committed"
-
-# Push to remote repository (assuming the remote is already set up)
-git push origin main
