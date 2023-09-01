@@ -93,8 +93,10 @@ map <Leader>n :NERDTreeToggle<CR>
 set clipboard=unnamed
 
 " Format the entire buffer 
-map <leader>f :%normal! gg=G<CR>
+map <leader>f :ClangFormat<CR>
 
+
+" leaderf config
 " 设置vim在哪打开的项目，就搜索哪个路径下的文件
 if !exists('g:first_vim_enter')
     let g:first_vim_enter = 1
@@ -105,15 +107,173 @@ let g:Lf_WorkingDirectory = getcwd()
 " leaderF 快捷键
 let g:Lf_ShortcutF = '<c-p>'
 let g:Lf_CommandMap = {'<C-Up>': ['<Up>'], '<C-Down>': ['<Down>']}
-
-
 let g:Lf_WildIgnore = {
   \ 'dir': [".svn",".git",".hg"],
   \ 'file': ['*.sw?','*.bak','*.exe','*.o','*.so','*.py[co]','~$*']
   \}
-
-let g:Lf_WindowPosition = 'popup'
+" let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 0
 noremap <Leader>rg :<C-U>Leaderf rg -e 
+" 函数列表
+" noremap <Leader>p :LeaderfFunction!<CR>
+noremap <m-p> :LeaderfFunction!<CR>
 
 " 设置vim 打开新窗口默认放在右边
 set splitright
+
+" 打开vim内置终端快捷键
+noremap <Leader>vt :vertical terminal<CR>
+
+
+" vim-plug config
+call plug#begin()
+" Any valid git URL is allowed
+Plug 'https://github.com/ycm-core/YouCompleteMe.git'
+Plug 'https://github.com/dense-analysis/ale.git'
+Plug 'https://github.com/octol/vim-cpp-enhanced-highlight.git'
+Plug 'https://github.com/ludovicchabant/vim-gutentags.git'
+Plug 'https://github.com/simeji/winresizer.git'
+Plug 'https://github.com/rhysd/vim-clang-format.git'
+call plug#end()
+
+" YouCompleteMe config
+let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_server_log_level = 'info'
+let g:ycm_min_num_identifier_candidate_chars = 2
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_complete_in_strings=1
+let g:ycm_key_invoke_completion = '<c-z>'
+set completeopt=menu,menuone
+noremap <c-z> <NOP>
+let g:ycm_semantic_triggers =  {
+            \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+            \ 'cs,lua,javascript': ['re!\w{2}'],
+            \ }
+
+
+" Ale config
+" let g:ale_linters_explicit = 1
+let g:ale_completion_delay = 500
+let g:ale_echo_delay = 20
+let g:ale_lint_delay = 500
+let g:ale_echo_msg_format = '[%linter%] %code: %%s'
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_insert_leave = 1
+let g:airline#extensions#ale#enabled = 1
+let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
+let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
+let g:ale_c_cppcheck_options = ''
+let g:ale_cpp_cppcheck_options = ''
+let g:ale_sign_error = "\ue009\ue009"
+hi! clear SpellBad
+hi! clear SpellCap
+hi! clear SpellRare
+hi! SpellBad gui=undercurl guisp=red
+hi! SpellCap gui=undercurl guisp=blue
+hi! SpellRare gui=undercurl guisp=magenta
+
+
+" vim alt映射配置
+function! Terminal_MetaMode(mode)
+    set ttimeout
+    if $TMUX != ''
+        set ttimeoutlen=30
+    elseif &ttimeoutlen > 80 || &ttimeoutlen <= 0
+        set ttimeoutlen=80
+    endif
+    if has('nvim') || has('gui_running')
+        return
+    endif
+    function! s:metacode(mode, key)
+        if a:mode == 0
+            exec "set <M-".a:key.">=\e".a:key
+        else
+            exec "set <M-".a:key.">=\e]{0}".a:key."~"
+        endif
+    endfunc
+    for i in range(10)
+        call s:metacode(a:mode, nr2char(char2nr('0') + i))
+    endfor
+    for i in range(26)
+        call s:metacode(a:mode, nr2char(char2nr('a') + i))
+        call s:metacode(a:mode, nr2char(char2nr('A') + i))
+    endfor
+    if a:mode != 0
+        for c in [',', '.', '/', ';', '[', ']', '{', '}']
+            call s:metacode(a:mode, c)
+        endfor
+        for c in ['?', ':', '-', '_']
+            call s:metacode(a:mode, c)
+        endfor
+    else
+        for c in [',', '.', '/', ';', '{', '}']
+            call s:metacode(a:mode, c)
+        endfor
+        for c in ['?', ':', '-', '_']
+            call s:metacode(a:mode, c)
+        endfor
+    endif
+endfunc
+call Terminal_MetaMode(0)
+
+
+" gutentags config
+" gutentags 搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
+" 所生成的数据文件的名称
+let g:gutentags_ctags_tagfile = '.tags'
+" 配置 ctags 的参数
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+let g:gutentags_ctags_exclude = [
+      \ '*.git', '*.svg', '*.hg',
+      \ '*/tests/*',
+      \ 'build',
+      \ 'dist',
+      \ '*sites/*/files/*',
+      \ 'bin',
+      \ 'node_modules',
+      \ 'bower_components',
+      \ 'cache',
+      \ 'compiled',
+      \ 'docs',
+      \ 'example',
+      \ 'bundle',
+      \ 'vendor',
+      \ '*.md',
+      \ '*-lock.json',
+      \ '*.lock',
+      \ '*bundle*.js',
+      \ '*build*.js',
+      \ '.*rc*',
+      \ '*.json',
+      \ '*.min.*',
+      \ '*.map',
+      \ '*.bak',
+      \ '*.zip',
+      \ '*.pyc',
+      \ '*.class',
+      \ '*.sln',
+      \ '*.Master',
+      \ '*.csproj',
+      \ '*.tmp',
+      \ '*.csproj.user',
+      \ '*.cache',
+      \ '*.pdb',
+      \ 'tags*',
+      \ 'cscope.*',
+      \ '*.css',
+      \ '*.less',
+      \ '*.scss',
+      \ '*.exe', '*.dll',
+      \ '*.mp3', '*.ogg', '*.flac',
+      \ '*.swp', '*.swo',
+      \ '*.bmp', '*.gif', '*.ico', '*.jpg', '*.png',
+      \ '*.rar', '*.zip', '*.tar', '*.tar.gz', '*.tar.xz', '*.tar.bz2',
+      \ '*.pdf', '*.doc', '*.docx', '*.ppt', '*.pptx',
+      \ ]
+
+" winresize config
+let g:winresizer_start_key = '<m-e>'
