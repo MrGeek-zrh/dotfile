@@ -85,7 +85,8 @@ setlocal foldlevel=1 " 设置折叠层数为 1
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> " 用空格键来开关折叠
 
 " 递归向上层寻找tags文件
-set tags=./.tags;,.tags
+" set tags=./.tags;,.tags
+set tags=./.tags
 
 map <Leader>n :NERDTreeToggle<CR>
 
@@ -97,26 +98,29 @@ map <leader>f :ClangFormat<CR>
 
 
 " leaderf config
-" 设置vim在哪打开的项目，就搜索哪个路径下的文件
+" 设置vim在哪打开的项目，就当前路径作为cwd
 if !exists('g:first_vim_enter')
     let g:first_vim_enter = 1
     autocmd VimEnter * execute 'cd %:p:h'
 endif
 let g:Lf_WorkingDirectory = getcwd()
-
 " leaderF 快捷键
 let g:Lf_ShortcutF = '<c-p>'
 let g:Lf_CommandMap = {'<C-Up>': ['<Up>'], '<C-Down>': ['<Down>']}
-let g:Lf_WildIgnore = {
-  \ 'dir': [".svn",".git",".hg"],
-  \ 'file': ['*.sw?','*.bak','*.exe','*.o','*.so','*.py[co]','~$*']
-  \}
+" let g:Lf_WildIgnore = {
+  " \ 'dir': [".svn",".git",".hg"],
+  " \ 'file': ['*.sw?','*.bak','*.exe','*.o','*.so','*.py[co]','~$*','.gitignore']
+  " \}
 " let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 0
-noremap <Leader>rg :<C-U>Leaderf rg -e 
+noremap <Leader>rg :<C-U>Leaderf rg --no-ignore -g '!mips*' -g '!loongarch*' -e 
 " 函数列表
 " noremap <Leader>p :LeaderfFunction!<CR>
 noremap <m-p> :LeaderfFunction!<CR>
+" let g:Lf_UseCache = 0 
+" let g:Lf_UseMemoryCache = 0
+let g:Lf_ExternalCommand = 'fd "%s" -I -H -E "mips*" -E "riscv64*" -E "loongarch*" -E "\*.py[co]" -E ".git" -E ".svn" -E ".hg" -E "\*.bak" -E "\*.o" -E ".gitignore"'
+
 
 " 设置vim 打开新窗口默认放在右边
 set splitright
