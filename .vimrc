@@ -138,6 +138,8 @@ Plug 'https://github.com/octol/vim-cpp-enhanced-highlight.git'
 Plug 'https://github.com/ludovicchabant/vim-gutentags.git'
 Plug 'https://github.com/simeji/winresizer.git'
 Plug 'https://github.com/rhysd/vim-clang-format.git'
+Plug 'https://github.com/tpope/vim-commentary.git'
+Plug 'https://github.com/vim-python/python-syntax.git'
 call plug#end()
 
 " YouCompleteMe config
@@ -281,3 +283,8 @@ let g:gutentags_ctags_exclude = [
 
 " winresize config
 let g:winresizer_start_key = '<m-e>'
+
+
+" python-syntax config 
+let g:python_highlight_all = 1
+
