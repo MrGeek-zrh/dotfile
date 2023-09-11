@@ -140,6 +140,7 @@ Plug 'https://github.com/simeji/winresizer.git'
 Plug 'https://github.com/rhysd/vim-clang-format.git'
 Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'https://github.com/vim-python/python-syntax.git'
+Plug 'HonkW93/automatic-verilog'
 call plug#end()
 
 " YouCompleteMe config
@@ -288,3 +289,5 @@ let g:winresizer_start_key = '<m-e>'
 " python-syntax config 
 let g:python_highlight_all = 1
 
+" 设置缩进为4个空格
+set ts=4
