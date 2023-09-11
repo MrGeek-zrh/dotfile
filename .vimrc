@@ -119,7 +119,7 @@ noremap <Leader>rg :<C-U>Leaderf rg --no-ignore -g '!mips*' -g '!loongarch*' -e
 noremap <m-p> :LeaderfFunction!<CR>
 " let g:Lf_UseCache = 0 
 " let g:Lf_UseMemoryCache = 0
-let g:Lf_ExternalCommand = 'fd "%s" -I -H -E "mips*" -E "riscv64*" -E "loongarch*" -E "\*.py[co]" -E ".git" -E ".svn" -E ".hg" -E "\*.bak" -E "\*.o" -E ".gitignore"'
+let g:Lf_ExternalCommand = 'fd "%s" -I -H -E "mips*" -E "riscv64*" -E "loongarch*" -E "*.py[co]" -E ".git" -E ".svn" -E ".hg" -E "*.bak" -E "*.o" -E ".gitignore"'
 
 
 " 设置vim 打开新窗口默认放在右边
