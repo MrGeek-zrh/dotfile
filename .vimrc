@@ -88,7 +88,10 @@ nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> " 用空格�
 " set tags=./.tags;,.tags
 set tags=./.tags
 
+" NERDTree config
 map <Leader>n :NERDTreeToggle<CR>
+" let NERDTreeIgnore=['\.d$[[dir]]', '\.o$[[file]]', 'tmp/cache$[[path]]']
+let NERDTreeIgnore=['\.o$[[file]]','\.d$[[file]]']
 
 " 设置vim的剪切板和系统剪切板通用
 set clipboard=unnamed
@@ -140,8 +143,12 @@ Plug 'https://github.com/simeji/winresizer.git'
 Plug 'https://github.com/rhysd/vim-clang-format.git'
 Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'https://github.com/vim-python/python-syntax.git'
-Plug 'HonkW93/automatic-verilog'
+Plug 'https://github.com/Yggdroot/LeaderF.git'
+Plug 'https://github.com/Shirk/vim-gas.git'
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
 call plug#end()
+
 
 " YouCompleteMe config
 let g:ycm_add_preview_to_completeopt = 0
@@ -291,3 +298,6 @@ let g:python_highlight_all = 1
 
 " 设置缩进为4个空格
 set ts=4
+
+" 解决bash vim延迟问题
+set timeoutlen=1000 ttimeoutlen=0

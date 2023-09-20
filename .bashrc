@@ -120,10 +120,13 @@ fi
 alias v="vim"
 export NEMU_HOME=/home/mrgeek/document/topcxy/ysyx/ysyx-workbench/nemu
 export AM_HOME=/home/mrgeek/document/topcxy/ysyx/ysyx-workbench/abstract-machine
-export NPC_HOME=/home/mrgeek/document/topcxy/ysyx/ysyx-workbench/npc
+
+export RISCV=/home/mrgeek/riscv
+
 
 # 在文件末尾添加以下代码
 # if [ ! -f ~/.script_executed ]; then
  	# touch ~/.script_executed
 	# /home/mrgeek/document/codes/sh-codes/upload.sh
 # fi
+export NPC_HOME=/home/mrgeek/document/topcxy/ysyx/ysyx-workbench/npc
