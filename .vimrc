@@ -91,7 +91,7 @@ set tags=./.tags
 " NERDTree config
 map <Leader>n :NERDTreeToggle<CR>
 " let NERDTreeIgnore=['\.d$[[dir]]', '\.o$[[file]]', 'tmp/cache$[[path]]']
-let NERDTreeIgnore=['\.o$[[file]]','\.d$[[file]]']
+let NERDTreeIgnore=['\.o$[[file]]','\.d$[[file]]','^_[[file]]','\.asm$[[file]]','\.sym$[[file]]']
 
 " 设置vim的剪切板和系统剪切板通用
 set clipboard=unnamed
@@ -122,7 +122,7 @@ noremap <Leader>rg :<C-U>Leaderf rg --no-ignore -g '!mips*' -g '!loongarch*' -e
 noremap <m-p> :LeaderfFunction!<CR>
 " let g:Lf_UseCache = 0 
 " let g:Lf_UseMemoryCache = 0
-let g:Lf_ExternalCommand = 'fd "%s" -I -H -E "mips*" -E "riscv64*" -E "loongarch*" -E "*.py[co]" -E ".git" -E ".svn" -E ".hg" -E "*.bak" -E "*.o" -E ".gitignore"'
+let g:Lf_ExternalCommand = 'fd "%s" -I -H -E "mips*" -E "riscv64*" -E "loongarch*" -E "*.py[co]" -E ".git" -E ".svn" -E ".hg" -E "*.bak" -E "*.o" -E ".gitignore" -E "_*" -E "*.asm" -E "*.sym"'
 
 
 " 设置vim 打开新窗口默认放在右边
