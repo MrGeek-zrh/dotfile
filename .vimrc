@@ -101,6 +101,7 @@ map <leader>f :ClangFormat<CR>
 
 
 " leaderf config
+
 " 设置vim在哪打开的项目，就当前路径作为cwd
 if !exists('g:first_vim_enter')
     let g:first_vim_enter = 1
@@ -147,6 +148,7 @@ Plug 'https://github.com/Yggdroot/LeaderF.git'
 Plug 'https://github.com/Shirk/vim-gas.git'
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
+Plug 'https://github.com/jiangmiao/auto-pairs.git'
 call plug#end()
 
 
@@ -154,7 +156,7 @@ call plug#end()
 let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_server_log_level = 'info'
-let g:ycm_min_num_identifier_candidate_chars = 2
+let g:ycm_min_num_identifier_candidate_chars = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_complete_in_strings=1
 let g:ycm_key_invoke_completion = '<c-z>'
@@ -321,3 +323,7 @@ function! Zoom ()
 endfunction
 
 nmap <leader>z :call Zoom()<CR>
+
+
+" autopairs config
+let g:AutoPairsShortcutToggle = ''

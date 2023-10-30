@@ -30,3 +30,8 @@ fi
 if [ -d "$HOME/riscv" ] ; then
     PATH="$HOME/riscv/bin:$PATH"
 fi
+
+# modelsim path 
+if [ -d "$HOME/intelFPGA/16.1/modelsim_ase/bin" ] ; then
+    PATH="$HOME/intelFPGA/16.1/modelsim_ase/bin:$PATH"
+fi
