@@ -1,1853 +1,3 @@
-gtkwave 1.gtkw 
-v 1.gtkw 
-gtkwave 1.gtkw 
-task
-ls
-task
-j heli__
-tmux 
-lzd
-cd busybox-1.27.2/
-ls
- ls
-l
-rm rootfs.img 
-dd if=/dev/zero of=rootfs.img bs=1M count=200
-ls
-task
-r
-ls
-task
-ls
-mkfs.ext3 rootfs.img 
-ls
-mount
-task
-ls
-task
-man chmod 
-task
-ls
-. r
-. ls
-r
-br
-ls
-l
-r
-v .
-j linux
-tmux 
-tmux attach
-git status 
-git stash 
-git pull origin pipeline 
-code .
-git pull origin pipeline 
-code .
-git status 
-git pull origin pipeline 
-git fetch 
-git pull origin pipeline 
-git log 
-git fetch origin 
-git merge origin/pipeline pipeline 
-git reset --hard b662456fc37ef9a7287dbc8238636be043072501
-git pull origin pipeline 
-code .
-git fetch origin 
-git merge origin/pipeline pipeline 
-task
-make -C testbench/verilator/DP wave MODULE=RRF
-make -C testbench/verilator/DP wave MODULE=RRF ENABLE_WAVE=Y
-make clean || true && make -C testbench/verilator/DP wave MODULE=RRF ENABLE_WAVE=Y
-task
-make clean || true && bear -- make sim STAGE=DP ENABLE_WAVE=Y
-bear -- make clean || true && make -C testbench/verilator/DP wave MODULE=RRF ENABLE_WAVE=Y
-l
-br compile_commands.json 
-b compile_commands.json 
-fd -e json
-fd -e -IH json
-fd -IH -e json
-v .
-task
-v .
-ls
-v .
-j hel__
-tmux 
-br
-. ranger
-ls
-bear -- make clean || true && bear -- make sim STAGE=DP ENABLE_WAVE=Y
-ls
-b compile_commands.json 
-ls
-bear -- make -C sim MODULE=RRF
- ENABLE_WAVE=Y
-bear -- make sim MODULE=RRF
-make sim MODULE=RRF
-make wave MODULE=RRF ENABLE_WAVE=Y
-make sim MODULE=RRF
-make wave MODULE=RRF ENABLE_WAVE=Y
-make sim MODULE=RRF
-make wave MODULE=RRF ENABLE_WAVE=Y
-make sim MODULE=RRF
-make wave MODULE=RRF ENABLE_WAVE=Y
-make sim MODULE=RRF
-make clean || true && bear -- make sim STAGE=DP ENABLE_WAVE=Y
-l
-b compile_commands.json 
-l
-. ranger
-make clean || true && bear -- make sim STAGE=DP ENABLE_WAVE=Y
-rm compile_commands.json 
-make clean || true && make sim STAGE=DP
-task
-make clean || true && make -C testbench/verilator/DP wave MODULE=RRF ENABLE_WAVE=Y
-make clean || true && make -C testbench/verilator/DP sim  MODULE=RRF
-make clean || true && bear -- make sim STAGE=DP ENABLE_WAVE=Y
-make clean || true && make sim STAGE=DP ENABLE_WAVE=Y
-make clean || true && make sim STAGE=DP
-make clean || true && make wave STAGE=DP ENABLE_WAVE=Y
-task
-make clean || true && bear -- make -C testbench/verilator/DP sim  MODULE=RRF_ALLO ENABLE_WAVE=Y
-task
-make clean || true && make -C testbench/verilator/DP sim  MODULE=RRF_ALLOC
-make clean || true && make -C testbench/verilator/DP sim  MODULE=RRF_ALLO
-make clean || true && make -C testbench/verilator/DP wave  MODULE=RRF_ALLO ENABLE_WAVE=Y
-make clean || true && make -C testbench/verilator/DP sim  MODULE=RRF_ALLO
-make clean || true && make -C testbench/verilator/DP sim  MODULE=RRF
-make clean || true && bear -- make sim STAGE=DP ENABLE_WAVE=Y
-make clean || true && make -C testbench/verilator/DP wave  MODULE=RRF_ALLO ENABLE_WAVE=Y
-make clean || true && bear -- make sim STAGE=DP ENABLE_WAVE=Y
-make clean || true && make -C testbench/verilator/DP wave  MODULE=RRF_ALLO ENABLE_WAVE=Y
-pro
-proxy
-git fetch 
-git fetch origin 
-git merge origin/pipeline pipeline 
-v .
-make clean || true && make -C testbench/verilator/DP sim  MODULE=RRF
-task
-make clean || true && make -C testbench/verilator/DP sim  MODULE=RRF
-task
-make clean || true && make -C testbench/verilator/DP sim  MODULE=RRF
-task
-make clean 
-task
-fd -IH build
-fd -IH -t d build/
-man fd
-fd -t d build
-fd -IH -t d ./build
-man fd
-fd -IH -td build
-man fd
-fd -IH -td build -E 3rd-party
-fd -IH -td build -E 3rd-party | xargs rm -rf 
-task
-fd -IH -td build -E 3rd-party
-git stash 
-git status 
-task
-git fetch origin 
-git status pop
-git stash pop 
-code .
-git status 
-code .
-make clean || true && make -C testbench/verilator/DP sim  MODULE=RRF
-make clean || true && make -C testbench/verilator/DP wave MODULE=RRF ENABLE_WAVE=Y
-make clean || true && make -C testbench/verilator/DP wave MODULE=RRF ENABLE_WAVE=Y DEBUG=Y
-make clean || true && make -C testbench/verilator/DP sim MODULE=RRF DEBUG=Y
-task
-fd -IH -td build -E 3rd-party | xargs rm -rf && make -C testbench/verilator/DP sim MODULE=RRF DEBUG=Y
-make clean || true && make -C testbench/verilator/DP wave MODULE=RRF ENABLE_WAVE=Y
-make clean || true && make -C testbench/verilator/DP sim  MODULE=RRF
-make clean || true && make -C testbench/verilator/DP wave MODULE=RRF ENABLE_WAVE=Y
-task
-make clean || true && make -C testbench/verilator/DP sim MODULE=RRF ENABLE_WAVE=Y || gtkwave testbench/verilator/DP/rrf.gtkw
-task
-make clean || true && make -C testbench/verilator/DP sim MODULE=RRF DEBUG=Y
-fd -IH -td build -E 3rd-party | xargs rm -rf && make -C testbench/verilator/DP sim MODULE=RRF DEBUG=Y
-gdb ./testbench/verilator/DP/build/VRrf 
-./testbench/verilator/DP/build/VRrf 
-sudo rr -n ./testbench/verilator/DP/build/VRrf 
-sudo rr -n record ./testbench/verilator/DP/build/VRrf 
-sudo rr record -n ./testbench/verilator/DP/build/VRrf 
-sudo rr replay 
-fd -IH -td build -E 3rd-party | xargs rm -rf && make -C testbench/verilator/DP sim MODULE=RRF DEBUG=Y
-sudo rr -n ./testbench/verilator/DP/build/VRrf 
-sudo rr record -n ./testbench/verilator/DP/build/VRrf 
-sudo rr replay 
-./testbench/verilator/DP/build/VRrf 
-task
-make clean || true && make -C testbench/verilator/DP sim MODULE=RRF DEBUG=Y
-task
-git stash 
-git push origin pipeline 
-proxy
-git push origin pipeline 
-929+22
-sh 929+22
-sh
-python3 
-task
-make clean || true && make -C testbench/verilator/DP sim MODULE=RRF DEBUG=Y
-task
-make clean || true && make -C testbench/verilator/DP sim MODULE=RRF DEBUG=Y
-task
-fd -IH -td build -E 3rd-party | xargs rm -rf && make -C testbench/verilator/DP sim
- MODULE=RRF DEBUG=Y
-fd -IH -td build -E 3rd-party | xargs rm -rf && make -C testbench/verilator/DP sim MODULE=RRF
-fd -IH -td build -E 3rd-party | xargs rm -rf && make -C testbench/verilator/DP sim MODULE=RRF DEBUG=Y
-v tmp.sh
-bash tmp.sh 
-v tmp.sh
-bash tmp.sh 
-v tmp.sh
-bash tmp.sh 
-ls
-task
-git checkout origin/difftest 
-git branch -a
-git status 
-git fetch origin 
-git status 
-task
-python3
-git status 
-git push origin pipeline 
-git rm tmp.sh 
-git status 
-git push origin pipeline 
-v .
-lazygit 
-v .
-tmux attac
-tmux attach
-v .
-task
-v .
-git status 
-git stash 
-lazygit 
-git fetch origin 
-git merge origin/pipeline pipeline 
-task
-proxy
-git push origin 
-cloc ./
-man cloc
-cloc --exclude-dir=3rd-party/ ./
-cloc --exclude-dir=3rd-party .
-git push origin pipeline 
-task
-cd
-v tmp/
-j hel__
-tmux 
-tmux attach
-j heli__
-v .
-bear -- make run
-make clean
-make run
-make clean 
-task
-make clean
-make run
-shell find src/ -name "*.c" | grep -v "src/main.c"
-find src/ -name "*.c" | grep -v "src/main.c"
-find src/ -name "*.c" 
-man grep
-make clean
-make run
-make clean
-make run
-make clean
-make run
-make clean
-make run
-make clean
-make run
-make clean
-make run
-make clean
-make run
-make clean
-make run
-cd
-j nemu
-v .
-cd
-j heli__
-v .
-j he__
-cd .
-cd ..
-ls
-cd HeliosXEmulator/
-ls
-tmux 
-l
-j hel__
-v .
-lzd
-cd
-cd document/
-t
-. ranger
-ls
-.r
-cd
-v .bashrc 
-cd
-cd document/
-.r
-ls
-nemo
-nemo .
-cd
-fzf calculate-price.html
-fzf calculate-price
-fzf
-cd document/github/
-ls
-cd ..
-cd other_file/ls
-cd other_file/
-s
-ls
-mv 我姐的文件/ my_sister_files
-cd my_sister_files/
-ls
-git clone git@github.com:MrGeek-zrh/price_calcu.git
-proxy
-git clone git@github.com:MrGeek-zrh/price_calcu.git
-l
-cd
-ls
-cd document/dotfile/
-ls
-ll
-ln
-ln -h
-man ln
-lazygit 
-cd ..
-cd other_file/my_sister_files/
-l
-git clone git@github.com:MrGeek-zrh/price_calcu.git
-proxy
-git clone git@github.com:MrGeek-zrh/price_calcu.git
-ls
-cd price_calcu/
-nemo .
-r
-j nem__
-v .
-cd
-r
-man cp
-cd
-cd -
-cp AutoGen_CompileCommand.sh /home/mrgeek/
-j dot
-ls
-ll
-proxy
-git push origin 
-cd
-v .ssh/config 
-cd -
-git push origin 
-proxy
-lazygit 
-ll
-unlink 
-man unl
-man unlink
-ll
-git push origin 
-cd document/dotfile/
-cp cp_config_file.sh /home/mrgeek/.local/bin/
-cd
-v .local/bin/cp_config_file.sh 
-cp_config_file.sh 
-l
-sudo rm /usr/bin/cp_config_file.sh 
-git stata
-git stat
-git status 
-git add .
-git status 
-r
-git status 
-git add .
-git status 
-git add .
-git status 
-cd
-r
-l
-cp_config_file.sh 
-l
-r
-git push origin 
-cd
-br
-r
-cd document/
-cd dotfile/
-ls
-v .
-ll
-chmod 774 cp_config_file.sh
-cp cp_config_file.sh /usr/bin/
-sudo cp cp_config_file.sh /usr/bin/
-ll
-cd ..
-cd -
-fd -ef
-fd -ef -IH ./
-fd -ef -IH .
-fd
-fd -ef -H .
-fd -tf -H .
-fd -ed -tf -H .
-man fd
-fd -E .git/ -tf -H .
-fd -E .git/ -tf -H . | xargs git rm
-git status 
-v .
-fd -E .git/ -tf -H . | xargs git rm
-l
-ll
-cd
-cd document/
-cp_config_file.sh 
-cd
-v .local/bin/cp_config_file.sh 
-cd document/
-cp_config_file.sh 
-cd dotfile/
-ll
-r
-v .local/bin/cp_config_file.sh 
-cd
-v .local/bin/cp_config_file.sh 
-j dot
-v .
-cd
-v .local/bin/cp_config_file.sh 
-cd -
-ls
-fd -E .git/ -tf -H .
-fd -E .git/ -E .gitmodules -tf -H .
-fd -E .git/ -E .gitmodules -tf -H . | xargs rm -rf
-ll
-cp_config_file.sh 
-l
-ll
-v .
-cd
-v .local/bin/cp_config_file.sh 
-cd -
-rm -rf .vim
-ll
-v .
-rm nvim/ -rf
-ll
-v /home/mrgeek/.local/bin/cp_config_file.sh 
-l
-cd ..
-cp_config_file.sh 
-cd dotfile/
-l
-r
-rm -rf config/
-rm -rf plugins/
-ls
-cd .
-v /home/mrgeek/.local/bin/cp_config_file.sh 
-task
-ls
-cd scripts/
-ls
-./compile_criu.sh 
-cd ..
-ls
-cd criu/
-sl
-ls
-l
-task
-./img-show fdinfo-45.img 
-./img-show 
-v fdinfo-45.img 
-ll fdinfo-45.img 
-less fdinfo-45.img 
-ll fdinfo-45.img 
-task
-l
-task
-mount
-ls
-cd criu/
-v .
-cd ..
-cd busybox-1.27.2/
-ls
-cd fd
-cd fs
-ls
-br .
-r
-j linux
-tmux 
-;zd
-lzd
-task
-cd busybox-1.27.2/fs
-ls
-r
-task
-scripts/compile_criu.sh 
-task
-scripts/compile_criu.sh 
-task
-scripts/compile_criu.sh 
-task
-scripts/compile_criu.sh 
-task
-cd fs
-ls
-cd busybox-1.27.2/
-cd fs/
-ls
-cd ..
-task
-mount
-task
-mount
-task
-cd criu/
-task
-l
-cd ..
-l
-mount
-task
-cd busybox-1.27.2/
-ls
-cd fs/
-ls
-task
-cd ..
-task
-cd fs
-mkdir -p document/criu/
-sudo mkdir -p document/criu/
-cd busybox-1.27.2/
-ls
-cd fs
-ls
-cd do
-cd document/
-ls
-cd criu/
-ls
-cd ..
-mout
-mount
-task
-mount
-scripts/compile_criu.sh 
-cd ..
-scripts/compile_criu.sh 
-mount
-task
-scripts/compile_criu.sh 
-task
-scripts/compile_criu.sh 
-task
-scripts/compile_criu.sh 
-ls
-cd busybox-1.27.2/
-cd fs
-ls
-cd ..
-mou
-mount
-scripts/compile_criu.sh 
-cd ..
-scripts/compile_criu.sh 
-mount
-scripts/compile_criu.sh 
-cd busybox-1.27.2/
-task
-cd fs
-ls
-ll
-r
-ls
-cp -dpR /dev/fd/[012]* dev/
-sudo cp -dpR /dev/fd/[012]* dev/
-r
-r dev/
-sudo cp -dpR /dev/tty[0-6] dev/
-br dev
-ls
-br
-r
-cp linuxrc etc/
-sudo cp linuxrc etc/
-ls
-r
-cd ..
-task
-scripts/compile_criu.sh 
-cd ..
-scripts/compile_criu.sh 
-ls
-mount
-task
-scripts/compile_criu.sh 
-task
-scripts/compile_criu.sh 
-task
-j work
-task
-cd nemu/
-task
-cd ..
-task
-j work
-task
-ps
-ps -a
-task
-lzd
-sudo dpkg -i linuxqq_3.2.5-21217_amd64.deb 
-ls
-cd vr
-cd criu/
-ls
-ll fdinfo-1142468.img 
-v .
-ps -a
-task
-git fetch 
-task
-j nore
-v .
-v tmp
-cd ..
-ls
-proxy
-git clone git@github.com:riscv-software-src/riscv-tests.git
-r
-ls
-cd
-cd riscv
-ls
-echo $RISCV
-pwd
-ls
-l
-lzd
-task
-j nem
-v .
-cd ...
-cd ..
-v .
-r
-l
-man install
-ls
-riscv64-linux-gnu-objdump 
-riscv64-linux-gnu-as isa/rv32ui/addi.S -o ./addi.elf
-ls
-riscv64-linux-gnu-objdump addi.elf 
-file addi.elf 
-ll addi.elf 
-ll
-riscv64-linux-gnu-readelf addi.elf 
-riscv64-linux-gnu-readelf -a addi.elf 
-l
-riscv64-linux-gnu-objdump -d addi.elf > addi.txt
-ls
-make clean 
-bear -- make
-proxyOff 
-bear -- make
-r
-l
-ll compile_commands.json 
-bear -- make
-ll compile_commands.json 
-bear -- make
-j linux
-task
-cd
-j risc
-cd
-j test
-cd
-j hel__
-cd ..
-cd riscv-tests/
-ls
-git submodule update --init --recursive
-proxy
-git submodule update --init --recursive
-ls
-autoconf 
-autoupdate 
-autoconf 
-echo $RISCV
-r $RISCV
-ls
-v configure
-ls
-./configure --prefix=$RISCV/target
-make
-r
-l
-make clean 
-make
-make clean 
-bear -- make
-make clean 
-proxyOff 
-bear -- make
-r
-make clean 
-make
-autoconf
-./configure --prefix=$RISCV/target
-make
-lazygit 
-ls
-cd ..
-rm -rf riscv-tests/
-git clone https://github.com/riscv/riscv-tests
-cd riscv-tests
-git submodule update --init --recursive
-autoconf
-autoupdate.
-autoupdate
-autoconf
-./configure --prefix=$RISCV/target
-make
-r
-fd isa/rv32-ui*
-fd isa/rv32-ui
-fd -IH isa/rv32-ui
-fd -IH rv32-ui*
-man fd
-fd -e "rv32-ui*"
-fd -e "rv32-ui\*"
-man fd
-fd -e 'rv32'
-fd -e rv32
-fd -e rv32 ./isa/
-fd -e rv32 ./isa
-fd isa
-fd -tf isa
-fd -tf rv32
-r
-fd -tf rv32
-fd -tf -e rv32
-fd -tf -e rv32ui
-fd rv32ui
-fd -tf -e rv32ui*
-fd -tf -e rv32ui.*
-fd -tf -e 'rv32ui.*'
-fd -IH -tf -e dump
-fd -IH -tf -e dump '$rv32ui'
-fd -IH -tf -e dump '$rv'
-fd -IH -tf -e dump ^rv32
-fd -IH -tf -e dump ^rv32ui
-fd -IH -tf -e dump ^rv32ui-p
-fd -IH -tf -e dump rv32ui-p
-fd -IH -tf -e dump rv32ui-p | xargs zip /home/mrgeek/document/dump.zip
-cd ..
-man objdump 
-tldr objdump
-riscv64-linux-gnu-objdump 
-man objdump
-man as
-man objdump 
-cd ..
-man fd
-tldr fd
-man d
-man fd
-make difftest
-make cls
-make clean 
-make -j$(nproc) difftest
-make clean 
-make difftest
-make clean 
-make difftest
-v .
-j heli__
-tmux 
-j he__
-git checkout difftest_alu 
-git status 
-bear --
-bear -- make -j$(nproc) sim STAGE=DIFFTEST
-proxyOff 
-bear -- make -j$(nproc) sim STAGE=DIFFTEST
-bear -- make sim STAGE=DIFFTEST
-make clean 
-make clean 
-bear -- make sim STAGE=DIFFTEST
-git submodule init 
-git submodule update
-proxy
-git submodule update
-bear -- make difftest
-proxyOff 
-bear -- make difftest
-git submodule update --init --recursive
-bear -- make difftest
-b compile_commands.json 
-pwd
-cd ..
-cd dump/
-ls
-cd isa/
-ls
-pwd
-b rv32ui-p-add.dump 
-ls
-b os
-ls
-man 3 kill
-man 3 signal
-man 3 killpg 
-task
-scripts/compile_criu.sh 
-ls
-cd criu/
-ls
-ps -a
-./cr-dump -p 1213694
-sudo rr record -n ./cr-dump -p 1213694
-rm *.img
-sudo rr record -n ./cr-dump -p 1213694
-task
-ps -a
-ps
-kill 1215201
-ps
-ps -a
-kill 1215586
-ps -a
-ps 
-ps -a
-tldr ps
-ps -aux
-htop
-toop
-top
-htop
-ps 828805
-ls
-rm *.img
-ll
-rm *.img
-ls
-./cr-dump -p 828805
-;s
-ls
-ll
-ps -a
-ps sleep.sh
-ps 828805
-kill 828805
-ps 828805
-ls
-ll
-./img-show fdinfo-828805.img 
-rm *.img
-ls
-man ps
-ls
-ps
-ps -a
-pgrep sleep.sh
-bash sleep.sh 
-bash sleep.sh &
-pgrep sleep 
-pgrep sleep.sh
-ps
-ps -a
-l
-mv sleep.sh count.sh
-chmod 774 count.sh 
-ls
-kill 1225582
-./count.sh &
-ps
-pgrep count
-pgrep count.sh 
-./cr-dump -p 1226164
-ll
-./img-show fdinfo-1226164.img 
-ls
-pgrep count
-pgrep count.sh 
-ps
-ps co
-ps count.sh 
-htop
-ps 1226164
-kill 1226164
-ls
-task
-v .
-task
-mount
-task
-v .
-l
-v .
-.r
-ls
-ll
-task
-ps
-bash sleep.sh &
-ps
-task
-ps
-task
-sudo rr record -n cr-dump
-task
-sudo rr replay 
-task
-ps
-task
-gdb ./cr-dump 
-sougou
-cd ..
-v .
-task
-j li__
-cd
-j linux
-tmux 
-make run
-cd ..
-cd HeliosXEmulator/
-ls
-v .
-fd -IH -td build -E 3rd-party
-task
-pw
-cd HeliosXSimulator/
-task
-cd ..
-l
-cd docs/
-task
-fd -IH -td build -E 3rd-party /home/mrgeek/document/topcxy/digital-study/HeliosXCore/
-task
-j nem
-v .
-ls
-v .
-cd
-v .bashrc 
-ls
-cd criu/
-ls
-ll
-ll *.img
-./img-show fdinfo-1226164.img 
-ps
-ps -a
-ps
-./count.sh 
-./count.sh &
-ps
-task
-ll
-ll *.img
-ps
-ps count.sh 
-ps -a count.sh 
-pgrep count.sh 
-ps -a
-pgrep count.sh | ps
-pgrep count.sh | ps -a
-pgrep count.sh | xargs ps -a
-ps
-task
-ps
-sudo rr record -n ./cr-dump -p 1803995
-task
-ls
-rm *.img
-ls
-rm *.img
-ls
-ps
-gdb ./cr-dump -p 1803995
-sudo gdb ./cr-dump -p 1803995
-sudo ./cr-dump -p 1803995
-l
-fd -e img
-man fd
-fd -e img -IH
-ls
-fd -e img
-l
-fd -e img -IH
-fd -e img -IH | ll
-fd -e img -IH | ls 
-ls
-ll
-task
-ps
-ps -a
-pgrep count.sh 
-pgrep count.sh | xargs kill
-pgrep count.sh 
-./count.sh &
-pgrep count.sh 
-cd /proc/1826001
-ls
-cd 
-cd /fs
-cd -
-j linux
-l
-cd linux-2.6.39/
-ls
-cd fs/
-ls
-cd proc/
-r
-ls
-cd
-ls
-j criu
-cd 
-cd document/topcxy/criu
-ls
-v .
-cd ..
-cd diy/
-;
-sl
-l
-mkdir criu
-cd criu/
-ls
-v .
-cd ..
-rm -rf criu/
-ls
-mkdir criu
-ps
- ps -a
-cd criu/
-ls
-./count.sh 
-./count.sh &
-ps
-r
-j isolate
-cd
-cd document/
-ls
-fd isolate
-j conta
-cd topcxy/container/
-ls
-cd isolate/
-l
-v isolate
-v isolate.c 
-j linux
-tmux 
-cd
-.r
-task
-cd ..
-task
-ltask
-task
-git statue
-git status 
-make difftest
-task
-make clean 
-task
-mv tmp sopport_inst
-task
-make lint
-git status 
-git push origin difftest_alu 
-git status 
-cd HeliosXSimulator/
-git status 
-cd ..
-ls
-git status 
-r
-task
-fd -IH -td build -E 3rd-party /home/mrgeek/document/topcxy/digital-study/HeliosXCore/
-task
-fd -td build -E 3rd-party /home/mrgeek/document/topcxy/digital-study/HeliosXCore/
-task
-l
-br build/
-task
-nemo
-nemo .
-git submodule update --remote --recursive
-git status 
-git submodule update --remote --recursive
-git status 
-git restore .
-git status 
-git add 3rd-party/fmt HeliosXSimulator 
-git status 
-git restore .
-git status 
-git restore --staged 3rd-party/fmt/
-git status 
-git restore 3rd-party/fmt HeliosXSimulator/
-git status 
-git restore 3rd-party/fmt/
-git status 
-git log
-git status 
-ls
-git status 
-cd 3rd-party/fmt
-git status 
-git checkout master 
-git status 
-lazygit 
-cd ..
-cd HeliosXSimulator/
-git status 
-cd 3rd-party/fmt/
-git status 
-git checkout master 
-cd ..
-cd -
-cd HeliosXEmulator/
-git status 
-git checkout main 
-git status 
-lazygit
-cd 3rd-party/fmt/
-git status 
-cd ..
-cd HeliosXSimulator/
-git status 
-git restore .
-git status 
-lazygit 
-git status 
-lazygit 
-git status 
-git submodule update --remote --recursive
-proxy
-git submodule update --remote --recursive
-git status 
-cd 3rd-party/fmt/
-git status 
-git checkout .
-git status 
-task
-git reset --hard 22b8fe4e5ec9bfcebc9c7fff17a468e2ab15cb3a
-git log 
-git submodule update --init
-git status 
-git submodule update --init --recursive
-git status 
-task
-man objcpy
-proxyOff 
-task
-v .
-proxy
-v .
-chmod 774  run.py 
-./run.py 
-ls
-python3 run.py 
-ls
-br txt_file/
-pdb3 run.py 
-code .
-pdb3 run.py 
-python3 run.py 
-cd txt_file/
-ls
-mkdir -p inst
-cp rv32ui-p-add.txt inst/
-cd inst/
-ls
-pwd
-ls
-j doc_
-j docume
-l
-unzip dump.zip ./dump/
-unzip dump.zip -d ./dump/
-cd d
-cd dump/
-ls
-cd isa/
-ls
-v .
-j hel__
-tmux 
-man 3 kill
-v .
-tmux 
-j he__
-tmux 
-cd
-j hel__
-v .
-j hel__
-v .
-ks
-ls
-l
-br /usr/bin/
-br /home/mrgeek/document/dotfile/
-AutoGen_CompileCommand.sh 
-if command -v mold --version >/dev/null 2>&1; then echo "-fuse-ld=mold"; fi
-clang++
-make all 
-l
-br bin/
-r
-rm -rf .git
-v .
-cd ..
-cp gtkwave-filter-process-RISC-V/ gtkwave-filter-process-reg_idx2str
-cp gtkwave-filter-process-RISC-V/ gtkwave-filter-process-reg_idx2str -r
-cd gtkwave-filter-process-reg_idx2str/
-v .
-j github
-l
-cd gtkwave-filter-process-RISC-V/
-v .
-tmux 
-cd ..
-cd gtkwave-filter-process-RISC-V/
-ls
-v .
-cd ..
-ls
-rm gtkwave-filter-reg_idx2str 
-make all 
-l
-rm bin/ -rf
-make cl
-make all 
-r
-make clean 
-make all
-r
-ls
-ll
-rm gtkwave-filter-reg_idx2str
-mv gtkwave-filter-reg_idx2str_  gtkwave-filter-reg_idx2str
-ls
-j gtkwa__
-v .
-task
-cd
-cd document/ls
-cd document/
-ls
-axel 
-axel https://github.com/iamcco/ds-pinyin-lsp/releases/download/v0.4.0/dict.db3.zip
-proxy
-axel https://github.com/iamcco/ds-pinyin-lsp/releases/download/v0.4.0/dict.db3.zip
-ls
-unzip dict.db3.zip -d dict_db3/
-cd dict_db3/
-ls
-ll
-b dict.db3 
-pwd
-l
-v tmp
-ls
-rm tmp
-ls
-ds-pinyin-lsp 
-v tmp
-v tmp/
-v tmp
-v tmp\
-cd
-v .bashrc 
-v .
-git fetch origin 
-git checkout MrGeek-zrh/docs 
-git checkout difftest_alu 
-git status 
-git checkout MrGeek-zrh/docs 
-git status 
-v .
-cd docs/HeliosXCore/
-code .
-v
-v .
-v 
-v
-v .
-cd ..
-v .
-code docs/HeliosXCore/
-eza
-lzg
-v .
-j hel__
-tmux 
-task
-cd ..
-task
-v .
-proxy
-sudo apt update 
-sudo apt upgrade 
-proxy
-sudo apt upgrade 
-nemo .
-l
-r
-.r
-sudo apt search deepin
-sudo apt search deepin | rg weichat
-sudo apt search deepin | rg wei
-sudo apt install com.qq.weixin.deepin
-cd
-cd .deepinwine/
-ls
-cd Deepin-WeChat/
-ls
-cd ..
-rm -rf Deepin-WeChat
-cd ~/Documents/WeChat Files/All Users
-cd 下载/
-ls
-cd 
-cd 文档/
-ls
-cd WeChat\ Files/
-ls
-cd All\ Users/
-ls
-br config/
-rm -rf config/
-cd ..
-task
-ls
-cd test
-cd testcase/
-ks
-ls
-touch rv32ui-p-add_addi.txt
-l
-cat rv32ui-p-add.txt rv32ui-p-addi.txt >> rv32ui-p-add_addi.txt 
-l
-./run.py 
-ls
-cd ..
-ls
-./run.py 
-python3 run.py 
-br
-ls
-r
-v .
-nemo .
-lzg
-r
-v testcase/
-cd testcase/
-ls
-cat rv32ui-p-and.txt rv32ui-p-andi.txt rv32ui-p-auipc.txt >> rv32ui-p-add_and_auipc.txt 
-b rv32ui-p-add_and_auipc.txt 
-task
-git status 
-git fetch origin 
-git merge main difftest_alu 
-git status 
-task
-v .
-j heli__
-tmux 
-v .
-j heli__
-tmux 
-AutoGen_CompileCommand.sh 
-ls
-b compile_commands.json 
-ls
-man stow
-cd -
-j linux
-ls
-cd criu/
-ls
-cp count.sh /home/mrgeek/document/topcxy/diy/criu/
-cd 
-j linux
-ls
-cd scripts/
-ls
-cd ..
-ls
-j diy/criu
-l
-ls
-l
-j github
-ls
-git clone https://github.com/lqqyt2423/wechat_spider.git
-cd wechat_spider
-npm install
-ls
-l
-ls
-cd /proc/
-ls
-br
-ls
-cd 221926/
-ls
-cd fdinfo/
-l
-sls
-ls
-cd ..
-/home/mrgeek/document/topcxy/diy/criu/count.sh &
-cd ..
-cd 257763/
-ls
-cd fdini
-cd fdinfo/
-ls
-b 0
-ls
-b 0
-cd ..
-ls
-cd fd
-ls
-b 1
-file 1
-ls
-ll
-ls
-ll
-j diy/criu
-sls
-l
-sl
-sls
-ls
-tmux 
-sudo apt remove com.qq.weixin.deepin 
-sudo apt install com.qq.weixin.deepin 
-man 3 opena
-f
-man 3 openat
-man openat
-stat count.sh 
-ps -a
-ps
-ps -a
-ps
-ps -a
-stat count.sh 
-man S_ISREG
-man 3 statvfs 
-man stat
-man 3 fstat
-man fstat
-v .
-j diy/criu
-tmux 
-j heli__
-tmux 
-ls
-ls
-j do__
-ls
-ls
-tmux 
-ls
-cd docs/HeliosXCore/
-l
-code .
-git status 
-git stash 
-git fetch origin 
-proxy
-git fetch origin 
-git merge main MrGeek-zrh/docs 
-r
-git status pop
-git stash pop
-l
-code .
-locate verilator
-whereis verilator
-make lc
-make clean 
-task
-fd -IH -td build -E 3rd-party /home/mrgeek/document/topcxy/digital-study/HeliosXCore/ | xargs rm -rf && scripts/verify.sh
-fd -td build -E 3rd-party /home/mrgeek/document/topcxy/digital-study/HeliosXCore/ | xargs rm -rf && scripts/verify.sh
-task
-git status 
-task
-make -j -C testbench/verilator/IF sim MODULE=PipelineIF
-remake -X -j -C testbench/verilator/IF sim MODULE=PipelineIF
-ls
-j hel__
-tmux 
-v .
-ls
-v .
-git status 
-fd -IH -td build -E 3rd-party /home/mrgeek/document/topcxy/digital-study/HeliosXCore/
-fd -td build -E 3rd-party /home/mrgeek/document/topcxy/digital-study/HeliosXCore/
-fd -td build -E 3rd-party /home/mrgeek/document/topcxy/digital-study/HeliosXCore/ | xargs rm -rf
-fd -td build -E 3rd-party /home/mrgeek/document/topcxy/digital-study/HeliosXCore/
-scripts/verify.sh 
-v .
-task
-git fetch origin 
-git merge main 
-ctags -R --fields=+nKz --langmap=Verilog:+.vh -R rtl
-tmux 
-j hel__
-tmux 
-j he__
-lzg
-task
-lzg
-neo
-r
-j digital
-ls
-r
-.r
-ls
-tree /
-ls
-l
-sl
-l
-v .
-j diy/criu
-ls
-tmux 
-time tree /
-tmux 
-j heli__
-v .
-j hel__
-tmux 
-ls
-cd /proc/
-ls
-ps
-cd 23207
-;s
-ls
-cd fd
-ls
-l
-ls
-ll
-b 0
-ls
-cd ..
-b status 
-ls
-b statm
-b stat
-man fstatfs
-man man
-man fstatfs
-cd
-cd bin/
-ls
-PATH_DIR="$HOME/bin"  # or another directory on your $PATH
-mkdir -p "$PATH_DIR"
-curl https://cht.sh/:cht.sh > "$PATH_DIR/cht.sh"
-chmod +x "$PATH_DIR/cht.sh"
-proxy
-PATH_DIR="$HOME/bin"  # or another directory on your $PATH
-mkdir -p "$PATH_DIR"
-curl https://cht.sh/:cht.sh > "$PATH_DIR/cht.sh"
-chmod +x "$PATH_DIR/cht.sh"
-ls
-ll
-cd
-help vp
-help cp
-man c
-man b
-man cht.
-f
-man cht.c
-cht.v
-c
-v .bashrc 
-c
-source .bashrc 
-c
-    cht.sh --standalone-install
-v cht.sh
-python
-man statfs
-statfs
-man fstat
-man statfs
-man tee
-tldr
-tldr tee
-cht.sh tee
-cht.sh tee | b
-    cht.sh --standalone-install
-c
-source .bashrc 
-source /home/mrgeek/.bashrc 
-c tee
-pip3 install virtualenv
-cht.sh --standalone-install
-sudo apt-get install python3 python3-pip
-cd
-cd /proc/
-ls
-ps
-cd 7403
-cd 74033/
-ls
-rg pipe
-fd .| rg pipe
-c fd
-tldr fd
-c tee
-man 3 tee
-man tee
-man 2 tee
-man man
-man mkfifo
-man 2 splice 
-man dup
-man 2 splice
-man statfs
-c strchr
-man strchr
-v .
-j diy/criu
-tmux 
-c tmux
-c kitty
-v .
-j diy/os
-ls
-cd os/
-ls
-l
-cd diy-os/
-l
-j tests
-cd -
-ls
-cd start/
-l
-cd test/
-ls
-v .
-tmux 
-cloc source/
-c mmap
-proxy
-manc 
-man c
-man mmap
-v .
-j criu
-ls
-cd
-j diy/criu
-tmux 
-v .
-j diy/os
-ls
-cd
-j test
-cd -
-j diy/os
-j ./tes__
-ls
-tmux 
-j diy/criu
-ls
-ttm
-tmux 
-j diy/ps
-cd
-j diy/ps
-j diy/os
-ls
-v .tmux.conf 
-tmux 
-tmux ls
-tmux kill-session -a -t 0
-tmux 
-t,
-tmux 
-vim tmp
-v tmp
-j docker
-ls
-cd .
-cd ..
-ls
-l
-pwd
-r
-v tmp
-lzd
-cd
-v .bash_profile o
-v .bash_profile
-v .bashrc 
-ifconfig 
-ip
-ifconfig 
-ip addr show 
-cat /sys/class/net/enp3s0/address
-curl ifconfig.me
-wget -qO- ifconfig.me
-curl ifconfig.me
-ping 223.93.162.186
-nemo .
-code 编译安装iSulad及验证checkpoint功能.md 
-docker build -t openeuler:22.03-lts-sp1-dev .
-docker build -t openeuler:22.03-lts-sp1-dev  .
-j docker
-l
-scd ..
-cd .
-cd ..
-ls
-docker pull openeuler/openeuler:22.03-lts-sp1
-ls
-docker run -it --name my-openeuler-dev openeuler/openeuler:22.03-lts-sp1 /bin/bash
-lzd
-v /home/mrgeek/.config/lazydocker/config.yml 
-lzd
-tmux 
-ls
-l
-mkdir openeuler/openeuler:22.03-lts-sp1 -p
-ls
-cd openeuler/
-ls
-cd openeuler\:22.03-lts-sp1/
-ls
-v .
-v Dockerfile
-task
-lzd
-;zd
-lzd
-v .
-lzd
-proxy
-docker build -t my-openeuler:22.03-lts-sp1-image .
-v Dockerfile 
-cd
-lzd
-cd -
-ls
-v Dockerfile 
-l
-pwd
-docker build -t openeuler:22.03-lts-sp1-dev .
-v Dockerfile 
-lzd
-r
-ls
-l
-man  ctags
-ctags -R --languages=C,Asm source/
-ls
-rm .tags 
-ls
-v .
-j diy/os
-tmux 
-cd diy-os/start/test/
-ls
-tmux 
-tmux attach
-v .
-j diy/criu
-tmux 
-j docker
-l
-cd ..
-l
-cd openeuler/
-l
-cd openeuler\:22.03-lts-sp1/
-l
-v Dockerfile 
-l
-docker build -t isulad_dev:openeuler_22.03_lts_sp1 .
-docker run -itd --name isulad_dev_openeuler:22.03.lts.sp1  -v /root/tmp/:/var/lib/isulad -v /sys/fs/cgroup/:/sys/fs/cgroup -v /lib/modules:/lib/modules --tmpfs /tmp:exec,mode=777 --tmpfs /run:exec,mode=777 --privileged isulad_dev:openeuler_22.03_lts_sp1 sh
-docker run -itd --name isulad_dev_openeuler_22_03_lts_sp1  -v /root/tmp/:/var/lib/isulad -v /sys/fs/cgroup/:/sys/fs/cgroup -v /lib/modules:/lib/modules --tmpfs /tmp:exec,mode=777 --tmpfs /run:exec,mode=777 --privileged isulad_dev:openeuler_22.03_lts_sp1 sh
-lzd
-l
-tar -xvf openEuler-docker.x86_64.tar.xz 
-ls
-rm *.json
-l
-rm *.json
-l
-rm 2ea0a6dc81aa4ea52eeacc821af9298dcc04066676d6021cb4a8188bc2a11756.tar
-ls
-l
-rm -rf e4dede9dadde44ed68f3fe2e3d78b26ec63bb13205e27f8ec96d309be017bf25
-l
-rm repositories
-l
-tar -xvf openEuler-docker.x86_64.tar.xz -C openEuler-docker/
-l
-mkdir openEuler-docker
-tar -xvf openEuler-docker.x86_64.tar.xz -C openEuler-docker/
-cd openEuler-docker/
 l
 v .
 ls
@@ -1998,3 +148,1853 @@ whereis cp_config_file.sh
 rm /home/mrgeek/.local/bin/cp_config_file.sh
 whereis cp_config_file.sh 
 ln cp_config_file.sh /home/mrgeek/.local/bin/cp_config_file.sh
+which cp_config_file.sh 
+task
+git status 
+git fetch origin 
+git status 
+br
+git init 
+rm -rf .git/
+git status 
+git push origin 
+git branch 
+git branch  -a
+git push --set-upstream origin main
+git push --set-upstream origin main --force
+j dot__
+l
+br nvim/
+v .
+v .bash_profile 
+ps
+ps -a
+htop
+whereis ds-pinyin-lsp 
+rm /home/mrgeek/software1/ds-pinyin/ds-pinyin-lsp
+l
+v tmp
+lzd
+tmux 
+lzd
+runc -v
+cd /var/lib/
+l
+cd isulad/
+l
+sudo su
+printenv 
+cd
+v .bashrc 
+task
+man bash
+h bash
+man bash
+cd
+cd /
+fd checkpoint_test.tar
+l
+mv checkpoint_test.tar /home/mrgeek/document/openeuler/
+sudo mv checkpoint_test.tar /home/mrgeek/document/openeuler/
+r
+l
+sudo apt-get install -y automake autoconf libtool cmake make libcap-dev selinux-utils libseccomp-dev yajl-tools git cgroup-tools tar python3 python3-pip dmsetup libarchive-tools libcurl4-openssl-dev zlib1g-dev libc6-dev libssl-dev gcc g++ libsystemd-dev libtar libtar-dev patch lxc criu libhttp-parser-dev libwebsockets-dev libncurses-dev protobuf-compiler libprotobuf-dev libc-ares-dev libgrpc-dev runc grpc grpc-plugins bash-completion
+cd ..
+l
+sudo apt remove lxc-dev 
+sudo apt install protobuf-compiler
+l
+git clone https://gitee.com/src-openeuler/lxc.git
+cd lxc/
+l
+lzd
+lzg
+l
+./apply-patches
+l
+cd lxc-4.0.3
+./autogen.sh
+./configure
+lzd
+l
+make -j $(nproc)
+make $(nproc)
+make clean
+make
+make clean
+make CFLAGS+=-Wno-strict-prototypes
+make install
+sudo make install
+lxc-ls
+lxc-ls -h
+cd ..
+l
+cd lxc/
+l
+cd ..
+l
+cd lcr/
+l
+apt show lxc | grep Version
+l
+make clean
+cd build/
+lzg
+sudo -E cmake ..
+sudo -E make -j $(nproc)
+sudo -E make install
+sudo ldconfig
+cd ..
+git clone https://gitee.com/openeuler/clibcni.git
+cd clibcni
+git checkout v2.1.0
+mkdir build
+cd build
+sudo -E cmake ..
+sudo -E make -j $(nproc)
+sudo -E make install
+sudo ldconfig
+cd ..
+l
+git clone https://gitee.com/src-openeuler/iSulad.git
+cd iSulad
+git fetch https://gitee.com/openeuler/iSulad.git pull/2345/head:pr_2345
+git checkout pr_2345
+mkdir build
+cd build
+sudo -E cmake -DENABLE_CRI_API_V1=ON ..
+sudo -E make -j $(nproc)
+sudo -E make install
+sudo ldconfig
+sudo nvim /etc/isulad/daemon.json
+sudo cp /etc/isulad/daemon.json /etc/isulad/daemon.json.bak
+export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:$LD_LIBRARY_PATH
+sudo ldconfig
+sudo isulad
+l
+cd /tmp/
+l
+proxy
+VERSION="v1.26.0" # check latest version in /releases page
+wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz
+sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin
+rm -f crictl-$VERSION-linux-amd64.tar.gz
+cd -
+l
+cd. .
+sudo nvim /etc/crictl.yaml 
+cd ..
+l
+v pod-config.json
+l
+ll
+crictl pods
+l
+sudo isulad
+ps -a
+sudo su
+cd src/
+br
+r
+cd lcr/
+l
+cd build/
+sudo -E cmake ..
+lxcfs -v
+lzd
+sudo isula ps -a
+crictl pull busybox
+sudo crictl pull busybox
+crictl images
+sudo crictl images
+l
+cd ..
+l
+crictl runp pod-config.json
+sudo crictl runp pod-config.json
+crictl create 8153300c012a05142c517c27e46b00658ac4386d09a716d5c8ea1278a3f7fa9a container-config.json pod-config.json 
+sudo crictl create 8153300c012a05142c517c27e46b00658ac4386d09a716d5c8ea1278a3f7fa9a container-config.json pod-config.json 
+sudo crictl ps -a
+sudo crictl pod 
+sudo crictl pods
+sudo crictl images
+sudo crictl images -q
+sudo crictl ps -a
+sudo crictl ps
+sudo crictl pods
+b pod-config.json 
+sudo crictl ps -a
+sudo crictl ps
+sudo crictl ps -a
+sudo crictl start 37a508f77ab6d
+sudo crictl ps
+isula -h
+isula --help
+help isula
+man help
+help
+task
+source /home/mrgeek/.bashrc 
+l
+h isula
+sudo isula exec ls
+h isula
+man isula
+h isula
+sudo isula ps
+sudo isula exec busybox ls .
+sudo isula exec 37a508f77ab6 ls .
+h isula
+sudo isula stop 37a508f77ab6
+ls
+sudo isula start 37a508f77ab6
+sduo isula ps
+sudo isula ps
+h crictl
+crictl checkpoint -e checkpoint_test.tar 37a508f77ab6
+sudo crictl checkpoint -e checkpoint_test.tar 37a508f77ab6
+l
+ll checkpoint_test.tar
+l
+tar -xf checkpoint_test.tar -C checkpoint_test
+r
+nemo .
+l
+sudo isula ps
+sudo isula stop 37a508f77ab6
+sudo isula rm 37a508f77ab6
+v new-container-config.json 
+sudo crictl pods
+sudo crictl create 8153300c012a0 new-container-config.json pod-config.json 
+sudo isula ps
+sudo isula ps -a
+ps 
+ps -a
+l
+h isula
+l
+mv isulad/编译安装iSulad及验证checkpoint功能.md .
+l
+rm isulad/ 
+rm isulad/ -rf
+l
+mkdir docs
+mv 编译安装iSulad及验证checkpoint功能.md docs/
+l
+mkdir example
+mv *.json example/
+l
+mv checkpoint_test.tar example/
+l
+cd iSulad/
+l
+ll
+br tools/
+br src/
+task
+sudo isulad
+sudo su
+l
+v .
+cd src/
+l
+cd ..
+task
+l
+lzg
+sudo apt install automake autoconf libtool cmake make libcap libcap-devel libselinux libselinux-devel libseccomp libseccomp-devel yajl-devel git libcgroup tar python3 python3-pip device-mapper-devel libarchive libarchive-devel libcurl-devel zlib-devel glibc-headers openssl-devel gcc gcc-c++ systemd-devel systemd-libs libtar libtar-devel patch lxc-devel criu http-parser-devel libwebsockets-devel  ncurses-devel protobuf-devel c-ares-devel grpc-devel  docker-runc grpc-plugins bash-completion
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
+export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH
+echo "/usr/local/lib" >> /etc/ld.so.conf
+sudo echo "/usr/local/lib" >> /etc/ld.so.conf
+sudo su
+sudo apt install -y g++ libprotobuf-dev protobuf-compiler protobuf-compiler-grpc libgrpc++-dev libgrpc-dev libtool automake autoconf cmake make pkg-config libyajl-dev zlib1g-dev libselinux1-dev libseccomp-dev libcap-dev libsystemd-dev git libarchive-dev libcurl4-gnutls-dev openssl libdevmapper-dev python3 libtar0 libtar-dev libhttp-parser-dev libwebsockets-dev
+proxy
+sudo apt install -y g++ libprotobuf-dev protobuf-compiler protobuf-compiler-grpc libgrpc++-dev libgrpc-dev libtool automake autoconf cmake make pkg-config libyajl-dev zlib1g-dev libselinux1-dev libseccomp-dev libcap-dev libsystemd-dev git libarchive-dev libcurl4-gnutls-dev openssl libdevmapper-dev python3 libtar0 libtar-dev libhttp-parser-dev libwebsockets-dev
+cd document/openeuler/
+l
+cd isulad/
+l
+cd ..
+rm openEuler-docker.x86_64.tar.xz 
+l
+BUILD_DIR=/tmp/build_isulad
+rm -rf $BUILD_DIR
+mkdir -p $BUILD_DIR
+cd $BUILD_DIR
+l
+cd
+j open
+l
+git clone https://gitee.com/openeuler/lcr.git
+cd lcr
+git fetch https://gitee.com/openeuler/lcr.git pull/306/head:pr_306
+git checkout pr_306
+mkdir build
+cd build
+l
+git status 
+lzg
+sudo -E cmake ..
+sudo apt install lxc-dev
+sudo -E cmake ..
+sudo -E make -j $(nproc)
+tmux 
+cd iSulad/build/
+l
+sudo -E cmake -DENABLE_CRI_API_V1=ON -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
+sudo su
+cd ..
+v docs/编译安装iSulad及验证checkpoint功能.md 
+cd
+cd .ssh/
+l
+cat id_rsa.pub 
+cd src/
+v .
+cd .
+cd. .
+cd ..
+v .
+cd ..
+l
+fd json
+fd compile
+fd compile_command.json
+fd compile_commands.json
+l
+cd iSulad/
+l
+cp build/compile_commands.json .
+l
+v .
+l
+r
+j toy__1__/home/mrgeek/document/topcxy 
+l
+v .bash
+v .bashrc 
+man ctags
+ll tags 
+ll
+l
+b compile_commands.json
+task
+cd ..
+task
+cd nemu/
+k
+l
+make run
+bear -- make run
+l
+b compile_commands.json
+make ARCH=riscv32-nemu run
+man snprintf 
+task
+l
+task
+rm .tags tags 
+l
+man ctags
+task
+ctags -R --exclude=src/isa/loongarch32r --exclude=src/isa/mips32 -a .
+man memset
+ctags -R --languages=C,Asm --exclude=src/isa/loongarch32r --exclude=src/isa
+ctags -R --languages=C,Asm --exclude=src/isa/loongarch32r --exclude=src/isa/mips32 .
+make menuconfig 
+bear -- make ARCH=riscv32-nemu run
+make ARCH=riscv32-nemu run
+bear -- make ARCH=riscv32-nemu run
+make clean
+bear -- make ARCH=riscv32-nemu run
+b compile_commands.json
+l
+rm tags 
+task
+l
+cd ..
+l
+cd -
+l
+ctags -R --languages=C,Asm --exclude=src/isa/loongarch32r --exclude=src/isa
+l
+ll
+fd compile_commands.json 
+l
+v nemu/
+cd nemu/
+l
+ll
+v .
+j nemu
+l
+cd ..
+tmux 
+man setuid
+l
+ll
+ll /bin/su
+su
+m
+source /home/mrgeek/.bashrc 
+m pthread_create
+v .
+v 
+v .
+l
+rm tags 
+v .
+l
+rm tags 
+l
+v .
+j he__
+v .
+l
+rm .tags tags 
+l
+fd tag
+v .
+l
+rm tags 
+l
+cd -
+l
+v .
+mkdir build
+cd build
+sudo -E cmake -DCMAKE_BUILD_TYPE=Debug -DENABLE_CRI_API_V1=ON -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
+sudo su
+sudo -E cmake -DCMAKE_BUILD_TYPE=Debug -DENABLE_CRI_API_V1=ON -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
+sudo -E make
+make clean
+sudo -E make -j $(nproc)
+b /etc/isulad/daemon.json
+sudo bat /etc/isulad/daemon.json
+l
+cd .
+ll
+br
+r
+m
+j iSu__
+l
+tmux 
+j top__
+mkdir openeuler
+cd openeuler/
+l
+git clone git@github.com:MrGeek-zrh/iSulad-dev.git
+l
+cd iSulad-dev/
+l
+cp -rf /home/mrgeek/document/openeuler/iSulad/* ./
+l
+v .
+nemo ,
+nemo .
+l
+v .
+tmux 
+ps
+cd /proc/5380/
+l
+cd stat
+l
+ll stat
+echo stat
+b stat
+cd ..
+l
+r
+m clone
+v .
+j diy/cri__
+l
+tmux 
+j criu
+l
+/home/mrgeek/.fzf/bin/fzf --print0 | xargs -0 -o vim
+fzf **
+fz
+fzf
+fzf /**
+fzf **/
+fzf --bash
+fzf
+fzf -v
+fzf -h
+h fzf
+fzf --version
+apt show fzf
+lib-shim
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+task
+fzf --version
+sudo apt remove fzf
+cd
+cd .fzf/
+l
+br bin/
+./install 
+fzf
+br bin/
+cd fz
+cd bin/
+l
+sudo cp fzf /usr/bin/
+fzf **
+pwd
+m fzf
+l
+task
+v .
+j isulad
+l
+tmux 
+fv /etc/isulad/daemon_constants.json
+task
+h fxf
+h fzf
+task
+source /home/mrgeek/.bashrc 
+sr
+fv
+task
+l
+br
+l
+ll
+l
+rm tags
+l
+ll
+b compile_commands.json 
+rm compile_commands.json 
+r
+l
+task
+m rr
+h rr
+br
+r
+ll build/src/isulad
+cp build/src/isulad ./
+l
+rm isulad
+sudo rr record -n ./build/src/isulad
+sudo su
+task
+whereis asynctask 
+cd
+cd /root/
+sudo su
+task
+sudo su
+task
+sudo su
+sudo isulad
+sudo su
+code .
+sudo gdb build/src/isulad
+fv cd
+cd
+cd /etc/isulad/
+l
+fv 
+j docu__
+fv
+fv 
+j docu__
+fv
+echo $PWD
+cd document/
+echo $PWD
+j github
+l
+git clone git@github.com:cgdb/cgdb.git
+cd cgdb/
+l
+mkdir build
+cd build/
+l
+cd ..
+cd build/
+l
+br
+cd ..
+l
+r
+fd configure
+./autogen.sh 
+l
+cd build/
+l
+../configure --prefix=$PWD/../build
+l
+make make -srj$(nproc)
+make -srj$(nproc)
+make -srj4
+l
+r
+make install
+ll /usr/bin/ | xargs rg cgdb
+ll /usr/bin/ | xargs rg cgdb'
+ll /usr/bin/ | xargs rg 'cgdb'
+ll /usr/bin/ | xargs rg -e 'cgdb'
+ll /usr/bin/ | xargs rg -e cgdb
+ll /usr/bin/ | xargs rg cgdb
+c rg
+l
+ll /usr/bin/ | rg cgdb
+ll /usr/bin/ | rg -e cgdb
+ll /usr/bin/
+l
+j isudla__dev
+l
+sudo su
+sudo gdb build/src/isulad
+sudo su
+v .
+proxy
+v .
+cd /var/run/
+l
+cd isula
+sudo su
+c
+c rg
+udo su
+sudo su
+j isulad__de
+tmux 
+sudo su
+j cgdb
+l
+cd cgdb/
+cd ..
+cd build/
+l
+make install
+sudo us
+sudo su
+sudo cp cgdb/cgdb /usr/bin/
+cd
+cgdb 
+v .
+j isulad
+c
+cd
+l
+c
+cd
+cd document/
+,r
+.r
+tmux 
+read -r -a ZDTM_OPTS
+apport
+sudo apt install apport
+m ctags
+proxy
+sudo apt install apport
+ systemd-coredump
+sudo apt install  systemd-coredump
+ systemd-coredump
+h docker
+docker checkpoint create 
+docker checkpoint create -h
+h docker
+h docker inspect
+sudo apt install libaio-dev
+sudo apt install python-yaml
+sudo apt install python3-yaml
+strace
+man strace
+dirname "${BASH_SOURCE[0]}"
+man .
+.
+task
+l
+h rg
+rg check
+h fd
+fd -e sh 
+fd -e sh | xargs rg checkpoint
+fd -e sh | xargs rg -e '\<criu\>'
+fd -e sh | xargs rg -e 'criu'
+fd -e sh | xargs rg criu
+h rg
+fd -e sh | xargs rg -i criu
+h rg
+fd -e sh | xargs rg -i CRIU
+fd -e sh | xargs rg -i -e 'criu"
+fd -e sh | xargs rg -i -e 'criu'
+fd -e sh | xargs rg -i -e '*criu*'
+fd -e sh | xargs rg -i -e '.*criu.*'
+fd -e sh
+fd -e sh | xargs rg checkpoint
+fd -e sh | xargs rg criu
+fd -e sh | xargs rg CRIU
+v .
+h bats
+bats
+man bats
+cd ..
+l
+proxy
+git clone git clone https://github.com/bats-core/bats-core.git
+git clone https://github.com/bats-core/bats-core.git
+cd bats-core/
+l
+/install.sh /usr/local
+./install.sh /usr/local
+sudo ./install.sh /usr/local
+cd .
+cd 
+bats 
+h bats 
+v .
+cd github
+l
+j github
+l
+git clone git@github.com:checkpoint-restore/criu.git
+proxy
+git clone git@github.com:checkpoint-restore/criu.git
+cd criu/
+l
+tmux 
+echo $RUNC
+run
+m tee
+c tee
+man service
+c service
+proxy
+c service
+v .
+man 1  ats
+f
+man 1 bats
+man 7 bats
+man man
+m test
+man tar
+m tar
+echo $EUID 
+r
+bashbug
+bashdb
+h bash
+l
+tar -xvjf bashdb-5.0-1.1.2.tar.bz2
+l
+cd bashdb-5.0-1.1.2/
+l
+cd ..
+mv bashdb-5.0-1.1.2 /home/mrgeek/software1/
+j so__
+l
+cd bashdb-5.0-1.1.2/
+l
+./configure --with-bash-src
+bash --version
+bash --debugger -c "set|grep -i dbg"
+./configure 
+cd ..
+rm bashdb-5.0-1.1.2/ -rf
+l
+j gith__
+l
+git clone git@github.com:BashSupport-Pro/bashdb.git
+git branch -a
+cd bashdb/
+l
+lzg
+git checkout bashsupport-5.1 
+l
+git status 
+sudo apt install textinfo
+l
+./autogen.sh 
+./configure 
+make
+sudo make install
+bashdb 
+l
+h bashdb
+bash --version
+l
+man bash
+bash --debugger -c "set|grep -i dbg"
+h bash
+bash --debugger -c "set|grep -i dbg"
+   bash --debugger -- bash-script-name script-arg1 script-arg2...
+bash -v
+l
+cd ..
+cd
+r
+nodejs
+sudo apt install nodejs
+m exec
+exec 
+exec -h\
+h exec
+echo $status
+cgdb 
+echo $CONSOLE_SOCKET
+h isula
+h isulad
+isulad
+sudo help isulad
+sudo su
+h isula 
+v .gutctags
+rm tags 
+l
+ll
+l
+cat .gutctags 
+ctags -R -L ./test/helpers.bash -L ./test/checkpoint.bats
+l
+b tags 
+rm tags 
+m ctags
+ctags-universal 
+ctags-universal -L test/helpers.bash 
+l
+rm tags 
+rm .gutctags 
+ctags test/helpers.bash test/checkpoint.bats 
+b tags 
+m exec
+m exec 
+h exec
+h runc
+man runc
+isula ps
+sudo su
+rm tags 
+ctags test/helpers.bash test/checkpoint.bats 
+h crictk
+f
+h crictl
+h isula
+h isula-create
+h isula
+isula ps
+sudo su
+h pthread_create
+m pthread_create
+l
+v .
+l
+cd tests/
+l
+cd integration/l
+cd integration/
+l
+bashdb -L . checkpoint.bats 
+h bashd
+h bashdb
+bashdb checkpoint.bats 
+j github
+l
+proxy
+git clone git@github.com:moby/moby.git
+l
+cd moby/
+l
+tmux 
+cd ..
+git coo
+git clone git@github.com:opencontainers/runc.git
+l
+cd runc/
+l
+tmux 
+v .
+l
+cd ..
+l
+rm -rf iSulad-dev/
+sudo rm -rf iSulad-dev/
+ll
+l
+j isulad
+l
+v .
+j isula__dev
+l
+tmux 
+v .
+j criu
+l
+cd
+cd document/
+l
+j gi__
+l
+cd criu/
+l
+tmux 
+cd
+cd .ssh/
+l
+cat id_rsa.pub 
+cd -
+code .
+git push origin 
+v .
+l
+cp test/checkpoint.sh ../
+cd ..
+l
+rm -rf iSulad-dev/
+git clone git@isrc.iscas.ac.cn:aios/satelliteOS/isulad.git
+l
+cd isulad/
+l
+cp ../checkpoint.sh test/
+v .
+lzg
+git checkout pr_2345 
+l
+lzg
+v .
+lzg
+cd ..
+l
+git clone git@isrc.iscas.ac.cn:aios/satelliteOS/students_weekly.git
+cd students_weekly/
+l
+cd zhangrenhao/
+l
+v 3月周报.md 
+v .
+sudo su
+fv
+j docu__
+fv 
+j isulad__dev
+tmux 
+whoami 
+isulad
+ls
+l
+cd document/
+j
+task
+~task
+task
+l
+task
+cd ..
+task
+cd nemu/
+task
+cd ..
+task
+m gdb
+task
+cgdb nemu/build/riscv32-nemu-interpreter 
+l
+rr record -n ./nemu/build/riscv32-nemu-interpreter
+sudo -E rr record -n ./nemu/build/riscv32-nemu-interpreter
+j isulad
+j topc
+cd openeuler/
+l
+cd isulad/
+l
+v .
+nemo
+. nemo
+.nemo
+nemo
+r
+bear -- make
+b compile_commands.json 
+make clean 
+l
+git submodule init && git submodule update
+proxy
+git submodule init && git submodule update
+code .
+j gih__1__/home/mrgeek/document/github 
+l
+task
+gc
+task
+sr
+gc git@github.com:upa/libpop.git
+l
+cd libpop/
+l
+tmux 
+v .
+gcc -v
+-ls
+tmux 
+v .
+v
+task
+make clean
+cd ..
+task
+cd nemu/
+cgdb nemu/build/riscv32-nemu-interpreter 
+cd ..
+cgdb nemu/build/riscv32-nemu-interpreter 
+ 
+cd nemu/
+make menuconfig 
+cd ..
+task
+cd nemu/
+task
+make menuconfig 
+make clean
+make run
+make gdb
+sudo -E nvim tmp/
+l
+j ne__
+cd ..
+j nemu
+l
+v .
+l
+man sudo 
+ll /etc/xdg/
+sudo -E nvim tmp/
+tmux 
+whereis gvv
+whereis gcc
+sudo us
+sudo su
+j diy.os.test
+j diy/os__
+l
+cd diy-os/code/
+l
+cd ..
+cd start/test/
+l
+v .
+j students_weekly
+j top__
+l
+cd openeuler/p
+cd openeuler/
+l
+cd students_weekly/
+l
+v .
+h crictl
+v .
+j isulad__1
+tmux 
+v .
+ isulad
+j isulad
+tmux 
+sudo su
+j doc__
+j docu__
+fv 
+l
+h isula
+h iuslad-inspect
+sudo su
+lzg
+l
+cd ..
+l
+j isu__
+l
+ll
+l
+cd ..
+j top
+cd openeuler/
+l
+cd isulad/
+h j
+pwd
+j -i
+cd
+j isula
+cd
+j isu__d
+cd -
+j ~/document/topcxy/openeuler/isulad
+l
+j s
+cd -
+j -s
+man j
+man jump
+h j
+cd
+j top__
+cd
+j top__
+cd
+j top__/isu
+j --purge
+j isu__2
+l
+tmux 
+sudo apt install -y automake autoconf libtool cmake make libcap libcap-devel libselinux libselinux-devel libseccomp libseccomp-devel yajl-devel git libcgroup tar python3 python3-pip device-mapper-devel libarchive libarchive-devel libcurl-devel zlib-devel glibc-headers openssl-devel gcc gcc-c++ systemd-devel systemd-libs libtar libtar-devel patch lxc-devel criu http-parser-devel libwebsockets-devel  ncurses-devel protobuf-devel c-ares-devel grpc-devel  docker-runc grpc-plugins bash-completion
+sudo apt install lxc-dev  libwebsockets-dev libgrpc-dev libprotobuf-dev 
+l
+cd iSulad/
+l
+cd ..
+rm -rf iSulad/
+sudo rm -rf iSulad/
+l
+gc git@isrc.iscas.ac.cn:aios/satelliteOS/isulad.git
+git clone export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
+export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:$LD_LIBRARY_PATH
+git clone git@isrc.iscas.ac.cn:aios/satelliteOS/isulad.git
+lcr
+fv
+fv 
+j do__
+cd ..
+fv
+sudo su
+isula ps -a
+sudo su
+v .
+git checkout pr_2345 
+v .
+sudo su
+cd ..
+fv 
+j isul__
+l
+cd ...
+cd ..
+l
+sudo apt install -y automake autoconf libtool cmake make libcap libcap-devel libselinux libselinux-devel libseccomp libseccomp-devel yajl-devel git libcgroup tar python3 python3-pip device-mapper-devel libarchive libarchive-devel libcurl-devel zlib-devel glibc-headers openssl-devel gcc gcc-c++ systemd-devel systemd-libs libtar libtar-devel patch lxc-devel criu http-parser-devel libwebsockets-devel  ncurses-devel protobuf-devel c-ares-devel grpc-devel  docker-runc grpc-plugins bash-completion
+sudo apt install  libcap-dev libcap2 libselinux1 libselinux1-dev libseccomp-dev libseccomp2 libcgroup2 glibc-tools 
+sudo apt install  libcap-dev libcap2 libselinux1 libselinux1-dev libseccomp-dev libseccomp2 libcgroup glibc-tools 
+sudo apt install  libcap-dev libcap2 libselinux1 libselinux1-dev libseccomp-dev libseccomp2 glibc-tools 
+tmux 
+l
+git clone git@isrc.iscas.ac.cn:aios/satelliteOS/isulad.git
+cd isulad/
+l
+tmux 
+ls
+ssh mrgeek@192.168.210.130
+ifconfig 
+ip addr
+fv
+j doc__
+cd
+cd document/
+l
+fv 
+ssh mrgeek@172.17.0.2
+ssh mrgeek@192.168.210.130
+tmux 
+ssh mrgeek@192.168.210.130
+j github
+l
+cd libpop/
+code .
+tmux attach
+ssh mrgeek@192.168.210.130
+cd document/
+fv 
+h cric
+h crictl
+h isula
+fv 
+sudo us
+sudo su
+h crictl
+h runc
+isula checkpoint --help
+isula start --help
+r
+        echo '{
+                "metadata": {
+                    "name": "busybox"
+                },
+                "image":{
+                    "image": "/path/to/checkpoint.tar"
+                },
+                "command": [
+                    "top"
+                ],
+                "log_path":"busybox1.0.log",
+                "linux": {
+                }
+            }' > /tmp/new-container-config.json
+b /tmp/new-container-config.json 
+jq
+b /tmp/new-container-config.json | jq
+h jq
+cat /tmp/new-container-config.json | jq > /tmp/new-container-config.json 
+cat /tmp/new-container-config.json 
+h jq
+        echo '{
+                "metadata": {
+                    "name": "busybox"
+                },
+                "image":{
+                    "image": "/path/to/checkpoint.tar"
+                },
+                "command": [
+                    "top"
+                ],
+                "log_path":"busybox1.0.log",
+                "linux": {
+                }
+            }' > /tmp/new-container-config.json
+b /tmp/new-container-config.json | jq
+h jq
+jq '.' /tmp/new-container-config.json
+jq /tmp/new-container-config.json
+        echo '{
+                "metadata": {
+                    "name": "busybox"
+                },
+                "image":{
+                    "image": "/path/to/checkpoint.tar"
+                },
+                "command": [
+                    "top"
+                ],
+                "log_path":"busybox1.0.log",
+                "linux": {
+                }
+            }' > /tmp/new-container-config.json
+            jq '.' /tmp/new-container-config.json > /tmp/formatted.json && mv /tmp/formatted.json /tmp/new-container-config.json
+b /tmp/new-container-config.json
+container_id=1
+        sed -i "s|\"image\": \".*\"|\"image\": \"/tmp/${container_id}.tar\"|g" /tmp/new-container-config.json
+b /tmp/new-container-config.json
+    echo '{
+            "metadata": {
+                "name": "sandbox",
+                "namespace": "default",
+                "attempt": 1,
+                "uid": "hdishd83djaidwnduwk29bcsb"
+            },
+            "log_directory": "/tmp",
+            "linux": {
+            }
+        }' > /tmp/pod-config.json
+        echo '{
+                "metadata": {
+                    "name": "busybox"
+                },
+                "image":{
+                    "image": "/path/to/checkpoint.tar"
+                },
+                "command": [
+                    "top"
+                ],
+                "log_path":"busybox1.0.log",
+                "linux": {
+                }
+            }' > /tmp/new-container-config.json
+        jq '.' /tmp/pod-config.json > /tmp/formatted.json && mv /tmp/formatted.json /tmp/pod-config.json
+        jq '.' /tmp/new-container-config.json > /tmp/formatted.json && mv /tmp/formatted.json /tmp/new-container-config.json
+ll /tmp
+l /tmp
+isula log
+isula --help
+man grep
+echo "{
+    \"metadata\": {
+        \"name\": \"sandbox\",
+        \"namespace\": \"default\",
+        \"attempt\": 1,
+        \"uid\": \"$(uuidgen)\"
+    },
+    \"log_directory\": \"/tmp\",
+    \"linux\": {
+    }
+}" > /tmp/pod-config.json
+b /tmp/pod-config.json 
+echo "{
+    \"metadata\": {
+        \"name\": \"sandbox\",
+        \"namespace\": \"default\",
+        \"attempt\": 1,
+        \"uid\": \"$(uuidgen)\"
+    },
+    \"log_directory\": \"/tmp\",
+    \"linux\": {
+    }
+}" > /tmp/pod-config.json
+b /tmp/pod-config.json 
+cd CI/test_cases/container_cases/
+l
+chmod 774 checkpoint.sh 
+sudo su
+cd ..c
+git fetch origin 
+lzg
+git checkout C/R-test 
+v .
+j open__
+l
+cd isulad/
+lzg
+sudo su
+cd document/
+fv 
+tmux 
+tar -xvf poppler-24.03.0.tar.xz 
+l
+cd poppler-24.03.0/
+l
+v ,
+v .
+mkdir build
+cd build
+cmake ..
+make
+make install
+make test
+l
+Freetype
+sudo apt install FreetypeFreetype
+sudo apt install Freetype
+cd ..
+l
+which asynctask 
+whereis isulad
+l
+cd CI/
+l
+cd test_cases/container_cases/
+l
+pwd
+l
+j github
+l
+cd asynctasks.vim/
+l
+cd bin/
+l
+b asynctask.cmd 
+task
+whereis isulad
+whereis asynctask 
+l
+cd /home/mrgeek/bin
+l
+ll
+l
+cd V
+cd /home/mrgeek/document/github/asynctasks.vim/bin/
+l
+ll
+chmod 775 ./*
+ll
+r
+ffmpegthumbnailer
+unar
+sudo apt-get install unar && unar
+code .
+fd json
+fd compile_commands.json 
+v .
+git stat
+git status
+git branch -h
+lzg
+git branch -r
+git branch -l
+git branch -r
+l
+v .
+sudo us
+sudo su
+sudo su
+h j
+j --purge
+j isula
+cd
+j isula__
+tmux 
+v .
+cd ../../
+fv 
+task
+ls
+l
+sl
+ls
+task
+sudo su
+sudo su
+ls
+sudo su
+task
+l
+br build/
+task
+l
+ll
+cd build/
+l
+ll
+cd src/
+l
+ll
+cd ../
+cd ..
+l
+sudo su
+sudo -E cgdb build/src/isulad
+cd ..
+cd -
+sudo -E nvim .
+l
+b  compile_commands.json 
+v .
+sudo -E nvim .
+j isulad
+l
+tmux 
+cd document/
+fv
+j isulad
+tmux 
+sudo su
+ls
+sudo apt install ghostwriter
+l
+v .
+l
+task
+cd
+pwd
+cd -
+l
+task
+l
+whoami 
+l
+isulad
+sudo su
+j isulad
+sudo su
+sudo -E tmux
+rustup
+v .
+proxy
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+rustc --version
+echo $PATH
+whereis rustc
+sudo rm /usr/bin/rustc
+sudo rm /usr/bin/rustdoc 
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+rustc
+j top__
+l
+mkdir os-comp
+cd os-comp/
+l
+mkdir rust-study
+cd rust-study/
+tmux 
+rustc hello.rs 
+l
+ll
+./hello 
+rustfmt 
+rustfmt hello.rs 
+v .
+l
+rustc
+rustc --versiob
+rustc --version
+j rust__
+tmux 
+cargo -v
+rust-analyzer 
+rust-analyzer -v
+rust-analyzer --version
+v .
+j rust
+tmux 
+/home/mrgeek/.local/share/nvim/mason/bin/rust-analyzer -v
+/home/mrgeek/.local/share/nvim/mason/bin/rust-analyzer -h
+j rust
+v .
+whereis rust-analyzer 
+rustc hello.rs 
+./hello 
+cargo --version 
+task
+l
+cargo new --vcs=git
+cd ..
+cargo new --vcs=git hello_cargo
+rm -rf hello_cargo/
+l
+cargo new hello_cargo
+./target/debug/hello_cargo 
+cargo run 
+v .
+j rust
+v .
+v
+v .
+proxy
+v .
+cargo new hello_cargo
+l
+cd hello_cargo/l
+cd hello_cargo/
+l
+sl
+ls
+v .
+ps
+ps -a
+ps
+v .
+cd ..
+l
+ll
+rm .git/
+rm .git/ -rf
+l
+rm hello.rs hello
+l
+rm tags 
+l
+cd hello_cargo/
+l
+v .
+l
+cd ..
+l
+cd -
+l
+cd ..
+cd -
+l
+c
+cargo new guessing_game
+cd guessing_game/
+tmux 
+ls
+l
+ls
+task
+proxy
+task
+l
+v .
+l
+isula run --help
+h isula run
+task
+GdbStart
+task
+echo $ISULAD_HOST
+l
+cd lua/plugins/
+l
+ll
+h chown 
+chown mrgeek:mrgeek nvim-dap-ui.lua 
+sudo chown mrgeek:mrgeek nvim-dap-ui.lua 
+ll
+j isual__
+v ,
+proxy
+v .
+gdb
+whereis  gdb
+/usr/local/bin/gdb
+gdb -v
+sudo apt update gdb
+sudo apt-get install gdb
+task
+man syslog 
+./configure --prefix=/usr
+l
+./autogen.sh 
+autoconf-archive
+sudo apt install autoconf-archive
+./autogen.sh 
+./configure --prefix=/usr
+make
+su make install
+sudo make install
+dbus -v
+dbus
+l
+cd bus/
+l
+dbus-daemon 
+whereis dbus-daemon 
+ll /usr/bin/dbus-daemon
+sudo dpkg -i google-chrome-stable_current_amd64.deb 
+chmod +x marktext-x86_64.AppImage 
+ll
+chmod -x marktext-x86_64.AppImage 
+l
+ll
+chmod +x marktext-x86_64.AppImage 
+ll
+nemo ,
+mv marktext-x86_64.AppImage /home/mrgeek/software1/install-package/
+j ins__
+l
+cd
+j install__
+cd
+cd [200~/home/mrgeek/software1/install-package~
+cd /home/mrgeek/software1/install-package
+l
+pwd
+l
+cd l
+cd lua/plugins/
+l
+ll
+gdb --version
+j so__
+l
+axel https://ftp.gnu.org/gnu/gdb/gdb-14.2.tar.gz
+tar -xvzf  gdb-14.2.tar.gz 
+cd gdb-14.2/
+l
+./con
+./configure 
+make -j$(nproc)
+gdb --version
+make install
+sudo make install
+make install
+gdb --version
+sudo make install
+task
+v .
+j nemu
+l
+task
+tmux 
+gdb --version
+whereis gdb
+j nemu
+task
+gdb build/riscv32-nemu-interpreter 
+ls
+export LSAN_OPTIONS=verbosity=1:log_threads=1
+echo $LSAN_OPTIONS'
+
+echo $LSAN_OPTIONS
+gdb --version
+gdb build/riscv32-nemu-interpreter 
+j nemu
+v .
+gdb --version
+v ,
+v .
+v. 
+v .
+h isula start
+h docker checkpoint
+criu -v
+criu --version
+h isula start
+h isula inspect
+isula inspect busy_test
+isula inspect busy_test | b
+proxyOff 
+isula inspect busy_test
+isula inspect busy_test | b
+j nem__
+v .
+v
+pro
+proxy
+v .
+ps
+ps -a
+v
+v .
+l
+ll Makefile
+v .
+cd dbus/
+l
+v .
+cd ..
+l
+v .
+v /
+v .
+dbus-daemon 
+dbus-daemon -v
+dbus-daemon -h
+h dbus-daemon
+l
+cd document/
+l
+cd topcxy/
+l
+gc git@gitlab.freedesktop.org:dbus/dbus.git
+git clone https://gitlab.freedesktop.org/dbus/dbus.git
+l
+cd dbus/
+l
+ll
+lzg
+git checkout dbus-1.14.10 
+lzg
+l
+rm .git
+rm .git -rf
+l
+fd .git
+lzg
+;zg
+lzg
+git remote add -h
+git remote add origin git@github.com:MrGeek-zrh/dbus.git
+lzg
+git push origin main 
+l
+v .
+lzg
+git fetch origin 
+git status 
+git branch -a
+git push origin main 
+git pull origin main 
+git status 
+git pull origin main 
+git push origin main --force
+lzg
+l
+tmux 
+cd guessing_game/
+v .
+v /
+v .
+cd ..
+task
+cargo new variables
+cd variables/
+l
+v .
+j rus__
+l
+tmux 
+j
+j isulad
+l
+task
+isula start -h
+isula start --help
+isula start container_test
+task
+isula start --help
+l
+isula rm container-test
+isula rm container_test
+task
+isula run busybox sh -C "while true; do\
+    echo 1\
+done\
+"
+l
+task
+isula rm a255f042f83b
+l
+task
+isula run -d busybox --name=test_c /bin/sh -c 'i=0; while true; do echo $i; i=$(expr $i + 1); sleep 1; done'
+task
+isula run -d busybox --name=test_c /bin/sh -c 'i=0; while true; do echo $i; i=$(expr $i + 1); sleep 1; done'
+h iusla run
+h isula run
+task
+isula rm 193cdd3ad406 4b86c581a3e0
+l
+task
+isula run --name=busy_test -d busybox /bin/sh -c 'i=0; while true; do echo $i; i=$(expr $i + 1); sleep 1; done'
+task
+isula busy_test logs
+isula logs busy_tests
+isula logs busy_test
+isula checkpoint -e /tmp/$container_id.tar $container_id
+task
+isula logs busy_test
+task
+l
+task
+h gdb
+task
+isula stop busy_test
+isulad
+j isulad
+l
+tmux 
+sudo su
+sudo -E tmux 
+task
+man tmux 
+ps
+ps -a
+git --version
+lazygit 
+j nemu
+lzg
+git log 
+lzg
+man su
+su mrgeek
+ll
+h chown  
+chown  mrgeek:mrgeek ./
+ll
+c chown
+c
+ping baidu.com
+proxyOff 
+ping baidu.com
+find .
+lils
+ls
+l
+su 1000
+su - 1000
+su help
+ls
+l
+w
+su root
+w
+su mrgeek
+j
+cd
+j dot
+l
+./cp_config_file.sh 
+l
+cd
+pwd
+j 
+l

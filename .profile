@@ -72,3 +72,4 @@ fi
 if [ -d "$HOME/software1/ds-pinyin/" ]; then
 	PATH="$HOME/software1/ds-pinyin:$PATH"
 fi
+. "$HOME/.cargo/env"

@@ -6,3 +6,4 @@ export PATH=$VERILATOR_ROOT/bin:$PATH
 source ~/.bashrc
 
 source /home/mrgeek/.config/broot/launcher/bash/br
+. "$HOME/.cargo/env"

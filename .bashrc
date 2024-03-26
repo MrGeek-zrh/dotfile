@@ -187,3 +187,17 @@ alias bathelp='bat --plain --language=help'
 help() {
 	"$@" --help 2>&1 | bathelp
 }
+alias h='help'
+
+alias m='man'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# -r确保了当nvim的输入为空时，nvim不会启动
+alias fv='fzf --print0 | xargs -0 -r -o nvim'
+alias sr='source /home/mrgeek/.bashrc'
+
+gc() {
+	proxy && git clone "$@" && proxyOff
+}
+. "$HOME/.cargo/env"
