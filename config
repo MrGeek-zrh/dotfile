@@ -1,0 +1,7 @@
+Host github.com
+    Hostname ssh.github.com
+    # Port 443
+    Port 22
+    User git
+    IdentityFile ~/.ssh/id_rsa.pub # your SSH public key file
+    ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
