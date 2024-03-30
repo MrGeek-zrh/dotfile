@@ -5,6 +5,7 @@ CP() {
 	cp -rf "$@"
 }
 
+#
 CONFIG_PATH=/home/mrgeek/.config/
 DOTFILE_PATH=/home/mrgeek/document/dotfile/
 
