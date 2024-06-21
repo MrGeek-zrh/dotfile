@@ -174,3 +174,7 @@ eval "$(zoxide init bash)"
 export NEMU_HOME="/home/mrgeek/document/ysyx-workbench/nemu"
 export AM_HOME="/home/mrgeek/document/ysyx-workbench/abstract-machine/"
 export AM_KERNEL_HOME="/home/mrgeek/document/ysyx-workbench/am-kernels/"
+
+eval $(thefuck --alias)
+# You can use whatever you want as an alias, like for Mondays:
+eval $(thefuck --alias f)
