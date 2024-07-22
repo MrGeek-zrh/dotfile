@@ -127,8 +127,9 @@ c() {
 	cht.sh "$@" | bat
 }
 
-alias bathelp='batcat --plain --language=help'
-function help() {
+# in your .bashrc/.zshrc/*rc
+alias bathelp='bat --plain --language=help'
+help() {
 	"$@" --help 2>&1 | bathelp
 }
 alias h='help'
@@ -141,10 +142,10 @@ alias fv='fzf --print0 | xargs -0 -r -o nvim'
 alias sr='source ~/.bashrc'
 
 # 使用bat高亮man手册的内容
-export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 
-alias b='batcat'
+alias b='bat'
 
 # yazi的配置文件
 function yy() {
@@ -178,3 +179,10 @@ export AM_KERNEL_HOME="/home/mrgeek/document/ysyx-workbench/am-kernels/"
 eval $(thefuck --alias)
 # You can use whatever you want as an alias, like for Mondays:
 eval $(thefuck --alias f)
+
+ai() {
+	sudo apt install "$@" -y
+}
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"
